@@ -1,0 +1,63 @@
+//colors
+$color-text: rgb(51, 42, 42); // for all regular text
+$color-white: #ffffff;
+$color-light-grey: #fafafa; // mostly used for section background,
+$color-grey: #888c81; // for grey text
+$primary-color: linear-gradient(
+  120deg,
+  rgb(56, 52, 52) 0%,
+  rgb(29, 26, 26) 100%
+); // brand color
+$shaded-lightblue: linear-gradient(120deg, #9becd4 0%, #46dfdf 100%);
+// Font-sizes
+$banner-title: 50px;
+$section-title: 30px;
+$sub-title: 22px;
+$card-title: 22px;
+$regular-text: 18px;
+
+// border
+$standard-border: 1px solid $color-white;
+$light-border: 1px solid $color-light-grey;
+
+// paddings and margins
+//pages
+$section-padding: 60px 55px;
+$section-padding-tablet: 100px 40px;
+$section-padding-mobile: 20px 5px;
+
+//templates
+$single-item-padding: 120px 55px;
+$single-item-padding-lg: 20px 70px;
+$single-item-padding-tablet: 20px 50px;
+$single-item-padding-mobile: 100px 5px;
+
+$single-item-description-padding: 20px 230px;
+$single-item-description-padding-tablet: 10px 35px;
+$single-item-description-padding-mobile: 20px 20px;
+
+$smaller-section-padding: 80px 0;
+$wrapper-padding: 40px 20px;
+$card-padding: 30px;
+
+$section-padding-tablet: 50px 38px;
+
+//line height
+$paragraph-line-height: 1.9;
+$paragraph-line-height-stretched: 2.2;
+$paragraph-line-height-mobile: 1.5;
+
+//hover effects
+$hover-button-color: #333369;
+$hover-button-effect: translateY(-0.1rem);
+
+//buttons padding
+$normal-btn-padding: 0.7rem;
+$small-btn-padding: 0.5rem;
+
+// === reponsiveness ===
+$smaller-smart-phones: 320px;
+$smart-phones: 576px;
+$tablets: 768px;
+$small-desktops: 992px;
+$large-desktops: 1200px;

@@ -1,0 +1,160 @@
+@import '../../scss/main.scss';
+
+.header {
+  align-self: center;
+  width: 100vw;
+  height: 60px;
+  background-color: $color-white;
+  box-shadow: 0px 3px 10px #00000033;
+  // position: fixed;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 2;
+}
+
+nav {
+  min-width: 65%;
+  height: 65px;
+}
+.title {
+  background: $primary-color;
+  width: 166px;
+  border-radius: 3px;
+  text-align: center;
+  padding: 6.1px;
+  margin-left: -4rem;
+}
+.title-link {
+  color: $color-white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.nav-link {
+  color: $color-text;
+  font-size: $regular-text;
+  height: 3rem;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+@mixin hover-state {
+  &:hover,
+  &:active,
+  &:focus {
+    @content;
+  }
+}
+.nav-item {
+  border-bottom: 3px solid transparent;
+  @include hover-state {
+    border-bottom: 3px solid $primary-color;
+  }
+}
+
+.toggle-wrapper {
+  display: none;
+}
+.hide-desktop {
+  display: none;
+}
+
+@media screen and (max-width: 1135px) {
+  nav {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  nav {
+    position: relative;
+  }
+  .hide-mobile {
+    display: none;
+  }
+  .show-mobile {
+    display: block;
+  }
+
+  .toggle-wrapper {
+    background-color: var(--primary-blue);
+    display: inline-block;
+    border-radius: 500px;
+    margin-top: 5px;
+    position: relative;
+    padding: 1px;
+    cursor: pointer;
+    z-index: 3;
+    float: right;
+  }
+
+  .toggle-bar {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-link {
+    color: white;
+    font-size: 24px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    /* background-image: linear-gradient(135deg, #667eea 0%, #195aae 100%);     */
+    background-image: inherit;
+    top: 0%;
+    left: 0%;
+    padding: 0;
+    -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    transition: all ease-in-out 0.1s;
+    opacity: 0.95;
+    background-color: black;
+    color: white;
+  }
+
+  summary {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    padding: 0.4rem;
+    height: 68px;
+  }
+
+  .title {
+    padding: 7px;
+  }
+  .title-link {
+    font-size: 13px;
+  }
+
+  .nav-item,
+  details {
+    font-size: var(--font-size-small);
+  }
+
+  .toggle-wrapper {
+    margin-top: 8px;
+  }
+  .toggle-bar {
+    width: 45px;
+    height: 45px;
+  }
+}

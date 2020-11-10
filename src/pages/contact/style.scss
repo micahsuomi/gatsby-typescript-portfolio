@@ -1,0 +1,69 @@
+@import '../../scss/main.scss';
+
+.contact {
+  padding: 4rem 5rem;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    @include shadow-trans;
+    @include md {
+      grid-template-columns: 1fr;
+    }
+    @include sm {
+      margin: -1rem;
+      padding: 2rem 0;
+    }
+    
+  }
+  &__left {
+    line-height: 1.8;
+    padding: 2rem;
+    background-color: $color-text;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    @include md {
+      width: 70vw;
+    }
+    @include sm {
+      width: 30rem;
+      height: 30rem;
+    }
+  }
+  &__info {
+    list-style: none;
+    align-self: flex-start;
+  }
+  &__social-wrapper {
+    list-style: none;
+    @include flex-property-row-center;
+    li a {
+      color: white;
+      margin: .4rem;
+    }
+
+  }
+  &__right {
+    padding: 0;
+    height: 31rem;
+  }
+  .social-icon {
+    color: white;
+    margin: 0.5rem;
+  }
+  
+  
+  
+  
+  
+  
+
+}
