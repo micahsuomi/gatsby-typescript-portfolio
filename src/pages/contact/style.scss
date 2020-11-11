@@ -16,7 +16,6 @@
       margin: -1rem;
       padding: 2rem 0;
     }
-    
   }
   &__left {
     line-height: 1.8;
@@ -47,9 +46,8 @@
     @include flex-property-row-center;
     li a {
       color: white;
-      margin: .4rem;
+      margin: 0.4rem;
     }
-
   }
   &__right {
     padding: 0;
@@ -59,11 +57,4 @@
     color: white;
     margin: 0.5rem;
   }
-  
-  
-  
-  
-  
-  
-
 }
