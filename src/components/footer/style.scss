@@ -1,55 +1,55 @@
 @import '../../scss/main.scss';
 
 .footer {
-    margin-top: -3rem;
-    padding: 2rem;
-    background: $primary-color;
-    -webkit-clip-path: polygon(50% 0, 100% 15%, 100% 100%, 50% 100%, 0 100%, 0 15%);
-    clip-path: polygon(50% 0, 100% 15%, 100% 100%, 50% 100%, 0 100%, 0 15%);
-    &__grid {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-       
-    }
-    
-    &__name {
-        color: $color-white;
-        font-weight: 300;
-        margin-left: 1.6rem;
-        font-size: var(--font-size-small);
-    }
-    &__date-tech,
-    &__date-tech a {
-        color: white;
-        text-decoration: none;
-    }
+  margin-top: -3rem;
+  padding: 1rem;
+  background: $primary-color;
+  -webkit-clip-path: polygon(
+    50% 0,
+    100% 15%,
+    100% 100%,
+    50% 100%,
+    0 100%,
+    0 15%
+  );
+  clip-path: polygon(50% 0, 100% 15%, 100% 100%, 50% 100%, 0 100%, 0 15%);
+  &__grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    &__social {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-    }
-    
-    &__icon {
-        font-size: 1.8em;
-    }
-    
-    &__social li a {
-        color: $color-white;
-        opacity: 0.8;
-        line-height: 0.01;
-        margin: .7rem;
-        font-size: var(--font-size-small);
+  &__name {
+    color: $color-white;
+    font-weight: 300;
+    margin-left: 1.6rem;
+    font-size: var(--font-size-small);
+  }
+  &__date-tech,
+  &__date-tech a {
+    color: white;
+    text-decoration: none;
+  }
 
-      
-    }
-    
-    &__social ul li a:hover {
-        color: skyblue;
-    }
+  &__social {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
 
+  &__icon {
+    font-size: 1.8em;
+  }
+
+  &__social li a {
+    color: $color-white;
+    opacity: 0.8;
+    line-height: 0.01;
+    margin: 0.7rem;
+    font-size: var(--font-size-small);
+  }
+
+  &__social ul li a:hover {
+    color: skyblue;
+  }
 }
-
-
-

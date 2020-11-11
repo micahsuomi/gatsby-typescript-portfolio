@@ -1,0 +1,46 @@
+@import '../../scss/main.scss';
+
+.education-card {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  padding: 2rem 3rem;
+  align-items: center;
+  justify-items: center;
+  @include shadow-trans;
+  &__image {
+    display: inline-block;
+    overflow: hidden;
+    height: 6rem;
+    width: 100%;
+    object-fit: cover;
+    img {
+      object-fit: cover;
+      width: 80%;
+      height: 93%;
+      overflow: hidden;
+    }
+  }
+  &__content {
+    h3,
+    h4 {
+      text-align: center;
+    }
+    &__description {
+      padding: 1rem;
+    }
+    p {
+      font-size: $regular-text;
+    }
+
+    ul {
+      list-style: none;
+      @include flex-property-row-center;
+      flex-wrap: wrap;
+
+      li {
+        margin: 0.3rem;
+        font-size: $regular-text;
+      }
+    }
+  }
+}

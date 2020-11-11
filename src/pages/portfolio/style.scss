@@ -7,11 +7,11 @@
   background-position: center;
   background-size: cover;
   margin-top: 2rem;
-  padding: 3rem 4rem;
+  padding: 3rem 5rem;
   position: relative;
   -webkit-clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
- 
+
   h2 {
     text-align: center;
     margin-top: 4rem;
@@ -22,61 +22,12 @@
 
   &__wrapper {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
     animation: appear;
     transition: all ease-in-out 2s;
     list-style: none;
     margin-top: 2rem;
-  }
-
-  &__item {
-    @include flex-property-column;
-    background-color: white;
-    border-radius: 3px;
-    width: 18rem;
-    height: 24rem;
-    text-align: center;
-    @include shadow-trans;
-    overflow: hidden;
-    }
-    &__content {
-      padding: 1rem 2rem;
-      h4 {
-        font-size: $card-title;
-        margin-top: 0.7rem;
-      }
-      p {
-        font-size: $regular-text;
-        font-family: 'Montserrat';
-      }
-
-    button {
-      width: 10rem;
-      background: rgb(69, 20, 83);
-      padding: 0.3rem;
-      text-transform: uppercase;
-      border: none;
-      border-radius: 25px;
-      color: white;
-      font-family: 'Montserrat';
-      cursor: pointer;
-    }
-  }
-  .portfolio__image-container {
-    display: inline-block;
-    overflow: hidden;
-    height: 266px;
-    width: 100%;
-    object-fit: cover;
-
-    img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-      @include shadow-trans;
-      overflow: hidden;
-
-    }
+    padding: 3rem 1rem;
   }
 }

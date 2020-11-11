@@ -5,8 +5,10 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import Layout from '../../components/layout'
 import Head from '../../components/head'
+import IconCard from '../../components/iconcard'
 
 import './style.scss'
+import { any } from 'prop-types'
 
 const AboutPage = () => {
   const data = useStaticQuery(graphql`
@@ -31,6 +33,58 @@ const AboutPage = () => {
               json
             }
             image {
+              file {
+                url
+              }
+            }
+          }
+        }
+      }
+      allContentfulFrontEndSkills {
+        edges {
+          node {
+            title
+            list
+            images {
+              file {
+                url
+              }
+            }
+          }
+        }
+      }
+      allContentfulBackendSkills {
+        edges {
+          node {
+            title
+            list
+            images {
+              file {
+                url
+              }
+            }
+          }
+        }
+      }
+      allContentfulDatabaseSkills {
+        edges {
+          node {
+            title
+            list
+            images {
+              file {
+                url
+              }
+            }
+          }
+        }
+      }
+      allContentfulDevOpsDeploymentSkills {
+        edges {
+          node {
+            title
+            list
+            images {
               file {
                 url
               }
@@ -71,18 +125,101 @@ const AboutPage = () => {
       </div>
       <div className="about__iconswrapper" data-aos="flip-right">
         {data.allContentfulAboutMeSkills.edges.map((edge: any) => {
+          const { slug, image, title, description, options } = edge.node
           return (
-            <div className="about__iconcard" key={edge.node.slug}>
-              <div className="about__icon-image">
-                <img src={edge.node.image.file.url} alt={edge.node.title} />
-              </div>
-              <div>
-                <h4 className="punchline">{edge.node.title}</h4>
-                {documentToReactComponents(edge.node.description.json, options)}
-              </div>
-            </div>
+            <IconCard
+              key={slug}
+              title={title}
+              image={image}
+              description={description}
+              options={options}
+            />
           )
         })}
+      </div>
+      <div className="about__skills-wrapper">
+        <div className="about__skills-frontend-container">
+          {data.allContentfulFrontEndSkills.edges.map((edge: any) => {
+            const { title, images, list } = edge.node
+            return (
+              <>
+                <h3>{title}</h3>
+                <div key={edge} className="about__skill-image--frontend">
+                  {images.map((image: any) => {
+                    return <img src={image.file.url} key={image.file.url} />
+                  })}
+                </div>
+                <div key={edge} className="about__skill-list--frontend">
+                  {list.map((l: any) => {
+                    return <p key={l}>{l}</p>
+                  })}
+                </div>
+              </>
+            )
+          })}
+        </div>
+        <div className="about__skills-nested">
+          <div className="about__skills-backend-container">
+            {data.allContentfulBackendSkills.edges.map((edge: any) => {
+              const { title, images, list } = edge.node
+              return (
+                <>
+                  <h3>{title}</h3>
+                  <div key={edge} className="about__skill-image--backend">
+                    {images.map((image: any) => {
+                      return <img src={image.file.url} key={image.file.url} />
+                    })}
+                  </div>
+                  <div key={edge} className="about__skill-list--backend">
+                    {list.map((l: any) => {
+                      return <p key={l}>{l}</p>
+                    })}
+                  </div>
+                </>
+              )
+            })}
+          </div>
+          <div className="about__skills-database-container">
+            {data.allContentfulDatabaseSkills.edges.map((edge: any) => {
+              const { title, images, list } = edge.node
+              return (
+                <>
+                  <h3>{title}</h3>
+                  <div key={edge} className="about__skill-image--databases">
+                    {images.map((image: any) => {
+                      return <img src={image.file.url} key={image.file.url} />
+                    })}
+                  </div>
+                  <div key={edge} className="about__skill-list--databases">
+                    {list.map((l: any) => {
+                      return <p key={l}>{l}</p>
+                    })}
+                  </div>
+                </>
+              )
+            })}
+          </div>
+        </div>
+        <div className="about__skills-devops-container">
+          {data.allContentfulDevOpsDeploymentSkills.edges.map((edge: any) => {
+            const { title, images, list } = edge.node
+            return (
+              <>
+                <h3>{title}</h3>
+                <div key={edge} className="about__skill-image--devops">
+                  {images.map((image: any) => {
+                    return <img src={image.file.url} key={image.file.url} />
+                  })}
+                </div>
+                <div key={edge} className="about__skill-list--devops">
+                  {list.map((l: any) => {
+                    return <p key={l}>{l}</p>
+                  })}
+                </div>
+              </>
+            )
+          })}
+        </div>
       </div>
     </Layout>
   )

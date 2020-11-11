@@ -77,6 +77,10 @@
     align-items: center;
     justify-items: center;
     flex-wrap: wrap;
+
+    p {
+      font-size: 14.5px;
+    }
   }
   &__prevNext-wrapper {
     display: flex;

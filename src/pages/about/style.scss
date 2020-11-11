@@ -16,7 +16,7 @@
       flex-direction: column;
     }
     img {
-      width: 100%;
+      width: 90%;
       align-self: center;
       @include md {
         width: 80%;
@@ -30,6 +30,10 @@
     align-items: center;
     flex-direction: column;
     padding: 0 2rem;
+
+    p {
+      font-size: $regular-text;
+    }
   }
 
   &__iconswrapper {
@@ -39,44 +43,91 @@
     text-align: center;
     align-items: flex-start;
     justify-items: center;
+    padding: 4rem 3rem;
+  }
+  &__skills-wrapper {
+    @include flex-property-column;
+    padding: 2rem 3rem;
+    h3 {
+      text-align: center;
+      margin-top: 2rem;
+    }
+  }
+  &__skills-frontend-container {
+    background-image: $shaded-lightblue;
+    color: white;
+    width: 100vw;
     padding: 2rem 3rem;
   }
-  &__iconcard {
-    display: flex;
-    flex-direction: column;
+  &__skills-backend-container {
+    background-color: rgb(255, 102, 0);
+    color: white;
+    width: 50vw;
+    padding: 2rem 3rem;
+  }
+  &__skills-database-container {
+    background-color: rgb(54, 124, 151);
+    color: white;
+    width: 50vw;
+    padding: 2rem 3rem;
+  }
+  &__skills-devops-container {
+    background-color: rgb(130, 23, 145);
+    color: white;
+    width: 100vw;
+    padding: 2rem 3rem;
+  }
+  &__skill-image--frontend,
+  &__skill-list--frontend {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
     align-items: center;
-
-    h4 {
-      margin-top: 1rem;
+    justify-items: center;
+    grid-gap: 1em;
+    img {
+      width: 60%;
     }
   }
-
-  &__icon-image {
-    background-image: $shaded-lightblue;
-    width: 10rem;
-    height: 10rem;
-    -webkit-clip-path: polygon(
-      50% 0%,
-      100% 25%,
-      100% 75%,
-      50% 100%,
-      0% 75%,
-      0% 25%
-    );
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    text-align: center;
-    margin: auto auto;
-    position: relative;
-
+  &__skills-nested {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__skill-image--backend,
+  &__skill-list--backend {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    grid-gap: 1em;
     img {
-      color: var(--light);
-      position: absolute;
-      opacity: 0.9;
-      width: 23%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      width: 60%;
     }
+  }
+  &__skill-image--databases,
+  &__skill-list--databases {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    grid-gap: 1em;
+    img {
+      width: 60%;
+    }
+  }
+  &__skill-image--devops,
+  &__skill-list--devops {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: center;
+    justify-items: center;
+    grid-gap: 1em;
+    width: 90.3vw;
+    img {
+      width: 60%;
+    }
+  }
+  &__skill-list--devops {
+    margin-bottom: 3rem;
   }
 }
 .wrapper {

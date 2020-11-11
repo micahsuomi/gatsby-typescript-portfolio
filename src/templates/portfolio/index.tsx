@@ -87,7 +87,9 @@ const Portfolio = (props: any) => {
               <ul className="portfolio-item__techs">
                 {' '}
                 {props.data.contentfulPortfolio.tech.map((t: any) => (
-                  <li key={t}>{t}</li>
+                  <li key={t}>
+                    <p>{t}</p>
+                  </li>
                 ))}
               </ul>
             </div>

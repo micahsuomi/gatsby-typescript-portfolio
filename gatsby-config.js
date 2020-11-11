@@ -1,9 +1,10 @@
+/* eslint-disable prettier/prettier */
 require('dotenv').config()
 module.exports = {
   siteMetadata: {
-    title: `jamstack-typescript-boilerplate`,
-    description: `jamstack-typescript-boilerplate`,
-    author: `@tripheo0412`,
+    title: `Michele Zucca`,
+    description: `michele-zucca-portfolio`,
+    author: `@michelezucca`,
     type: process.env.GATSBY_ACTIVE_ENV || 'staging',
     siteUrl: `https://www.your-app-domain.netlify.app/`,
     hostname: `your-app-domain.netlify.app`,
@@ -11,15 +12,21 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
-    /***** REMOVE COMMENT TO ENABLE CONTENTFUL CMS
-		{
-			resolve: `gatsby-source-contentful`,
-			options: {
-				spaceId: process.env.CONTENTFUL_SPACE_ID,
-				accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-			},
-		},
-    ******/
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Montserrat', 'Roboto'],
+        },
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {

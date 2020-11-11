@@ -1,8 +1,9 @@
 import React from 'react'
-import { Link, graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 
 import Head from '../../components/head'
 import Layout from '../../components/layout'
+import PortfolioItem from '../../components/portfolioitem'
 
 import './style.scss'
 
@@ -31,26 +32,20 @@ const Portfolio = () => {
       <Head title="Portfolio" />
       <div className="portfolio">
         <h2>Portfolio</h2>
-        <ul className="portfolio__wrapper">
+        <div className="portfolio__wrapper">
           {data.allContentfulPortfolio.edges.map((edge: any) => {
+            const { slug, title, subtitle, image } = edge.node
             return (
-              <li key={edge.node.slug} className="portfolio__item">
-                {edge.node.image && (
-                  <div className="portfolio__image-container">
-                    <img src={edge.node.image.file.url} alt={edge.node.title} />
-                  </div>
-                )}
-                <div className="portfolio__content">
-                  <h4>{edge.node.title}</h4>
-                  <p>{edge.node.subtitle}</p>
-                  <Link to={`/portfolio/${edge.node.slug}`}>
-                    <button className="grow">View</button>
-                  </Link>
-                </div>
-              </li>
+              <PortfolioItem
+                key={slug}
+                slug={slug}
+                title={title}
+                subtitle={subtitle}
+                image={image}
+              />
             )
           })}
-        </ul>
+        </div>
       </div>
     </Layout>
   )

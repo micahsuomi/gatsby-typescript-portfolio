@@ -1,0 +1,79 @@
+@import '../../scss/main.scss';
+
+.portfolio-card {
+  @include flex-property-column;
+  background-color: white;
+  border-radius: 3px;
+  width: 16rem;
+  height: 17rem;
+  text-align: center;
+  @include shadow-trans;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+
+  &__image-container {
+    display: inline-block;
+    overflow: hidden;
+    height: 17rem;
+    width: 100%;
+    object-fit: cover;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      @include shadow-trans;
+      overflow: hidden;
+    }
+  }
+
+  &__content {
+    padding: 1rem 2rem;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    width: 16rem;
+    height: 17rem;
+    border-radius: 3px;
+    overflow: hidden;
+    @include flex-property-column;
+    opacity: 0;
+
+    h4 {
+      font-size: $card-title;
+      margin-top: 0.7rem;
+      color: $color-white;
+    }
+    p {
+      font-size: $regular-text;
+      font-family: 'Montserrat';
+      color: $color-white;
+    }
+
+    button {
+      width: 10rem;
+      background: rgb(69, 20, 83);
+      padding: 0.3rem;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 25px;
+      color: white;
+      font-family: 'Montserrat';
+      cursor: pointer;
+    }
+  }
+  &__content:hover {
+    opacity: 0.9;
+    transition: all ease-in-out 0.5s;
+    animation-name: appear;
+    animation-timing-function: 0.1s;
+  }
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
