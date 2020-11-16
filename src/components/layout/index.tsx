@@ -25,7 +25,13 @@ const Layout: React.FC = ({ children }) => {
   `)
 
   return (
-    <>
+    <div
+      style={{
+        position: 'relative',
+        minWidth: '100%',
+        overflow: 'hidden',
+      }}
+    >
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -43,7 +49,7 @@ const Layout: React.FC = ({ children }) => {
           instagram={data.contentfulFooter.instagram}
         />
       </div>
-    </>
+    </div>
   )
 }
 

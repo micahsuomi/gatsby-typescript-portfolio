@@ -2,13 +2,13 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import Img from 'gatsby-image'
 
 import Layout from '../../components/layout'
 import Head from '../../components/head'
 import IconCard from '../../components/iconcard'
 
 import './style.scss'
-import { any } from 'prop-types'
 
 const AboutPage = () => {
   const data = useStaticQuery(graphql`
@@ -19,10 +19,9 @@ const AboutPage = () => {
           json
         }
         image {
-          file {
-            url
+          fluid(maxWidth: 930) {
+            ...GatsbyContentfulFluid
           }
-          description
         }
       }
       allContentfulAboutMeSkills {
@@ -110,9 +109,10 @@ const AboutPage = () => {
       <Head title="About" />
       <div className="about">
         <div className="about__img-container">
-          <img
-            src={data.contentfulAbout.image.file.url}
-            alt={data.contentfulAbout.image.description}
+          <Img
+            fluid={data.contentfulAbout.image.fluid}
+            key={data.contentfulAbout.image.fluid.src}
+            alt={data.contentfulAbout.title}
           />
         </div>
         <div className="about__content">

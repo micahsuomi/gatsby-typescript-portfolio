@@ -27,6 +27,10 @@
     }
     h1 {
       font-size: $banner-title;
+      @include sm {
+        text-align: center;
+        font-size: 40px;
+      }
     }
   }
 

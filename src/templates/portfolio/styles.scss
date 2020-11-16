@@ -15,6 +15,10 @@
   background-color: $color-light-grey;
   border: 1px solid rgba(211, 211, 211, 0.5);
   @include shadow-trans;
+  @include md {
+    padding: 2rem 2rem;
+    width: 97vw;
+  }
   &__exit {
     display: flex;
     justify-content: flex-end;
@@ -32,6 +36,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: flex-start;
+    @include sm {
+      grid-template-columns: 1fr;
+    }
   }
   &__portfolioDetail {
     margin-top: 1.2rem;
@@ -77,6 +84,9 @@
     align-items: center;
     justify-items: center;
     flex-wrap: wrap;
+    @include md {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     p {
       font-size: 14.5px;

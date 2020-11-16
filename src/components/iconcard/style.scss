@@ -4,6 +4,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include sm {
+    padding: 1rem;
+  }
 
   h4 {
     margin-top: 1rem;

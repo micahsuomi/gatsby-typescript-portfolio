@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 
 import { PortfolioItemProps } from '../../types'
 
@@ -15,7 +16,7 @@ const PortfolioItem = ({
     <div className="portfolio-card">
       {image && (
         <div className="portfolio-card__image-container show">
-          <img src={image.file.url} alt={title} />
+          <Img fluid={image.fluid} key={image.fluid.src} alt={title} />
         </div>
       )}
       <div className="portfolio-card__content hide">

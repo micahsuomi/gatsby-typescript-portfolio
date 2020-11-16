@@ -17,10 +17,9 @@ const Portfolio = () => {
             title
             subtitle
             image {
-              file {
-                url
+              fluid(maxWidth: 930) {
+                ...GatsbyContentfulFluid
               }
-              description
             }
           }
         }

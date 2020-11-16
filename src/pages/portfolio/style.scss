@@ -11,6 +11,15 @@
   position: relative;
   -webkit-clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
+  @include md {
+    padding: 2rem 1rem;
+  }
+  @include sm {
+    padding: 5rem 1rem;
+  }
+  @include ssm {
+    padding: 5rem 0;
+  }
 
   h2 {
     text-align: center;
@@ -29,5 +38,13 @@
     list-style: none;
     margin-top: 2rem;
     padding: 3rem 1rem;
+    justify-items: center;
+    align-items: center;
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+      grid-template-columns: 1fr;
+    }
   }
 }

@@ -13,17 +13,33 @@
     height: 6rem;
     width: 100%;
     object-fit: cover;
+    @include sm {
+      text-align: center;
+      height: 7rem;
+    }
     img {
       object-fit: cover;
       width: 80%;
       height: 93%;
       overflow: hidden;
+      @include sm {
+        height: 100%;
+        width: 100%;
+      }
     }
+  }
+  @include sm {
+    grid-template-columns: 1fr;
+    padding: 4rem 2rem;
+
   }
   &__content {
     h3,
     h4 {
       text-align: center;
+      @include sm {
+        margin-top: 1rem;
+      }
     }
     &__description {
       padding: 1rem;
@@ -36,7 +52,9 @@
       list-style: none;
       @include flex-property-row-center;
       flex-wrap: wrap;
-
+      @include sm {
+        margin-left: -2rem;
+      }
       li {
         margin: 0.3rem;
         font-size: $regular-text;

@@ -18,6 +18,14 @@ const borderToggleBarUnclicked = {
   border: 'none',
 }
 
+const styleClicked = {
+  backgroundColor: 'white',
+}
+
+const styleUnclicked = {
+  backgroundColor: 'black',
+}
+
 const Header = ({ siteTitle }: HeaderProps) => {
   const [isClicked, setState] = useState(false)
   const navList = 'nav-list'
@@ -54,12 +62,14 @@ const Header = ({ siteTitle }: HeaderProps) => {
           >
             <span
               className={isClicked ? lineClassOneActive : lineClassOne}
+              style={isClicked ? styleClicked : styleUnclicked}
             ></span>
             <span
               className={isClicked ? lineClassTwoActive : lineClassTwo}
             ></span>
             <span
               className={isClicked ? lineClassThreeActive : lineClassThree}
+              style={isClicked ? styleClicked : styleUnclicked}
             ></span>
           </div>
         </div>

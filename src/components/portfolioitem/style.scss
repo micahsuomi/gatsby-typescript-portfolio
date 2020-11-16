@@ -11,6 +11,14 @@
   overflow: hidden;
   position: relative;
   cursor: pointer;
+  @include sm {
+    width: 19rem;
+    height: 19rem;
+  }
+  @include ssm {
+    width: 16rem;
+    height: 16rem;
+  }
 
   &__image-container {
     display: inline-block;
@@ -37,7 +45,15 @@
     border-radius: 3px;
     overflow: hidden;
     @include flex-property-column;
+    background-color: rgba(0, 0, 0, 0.8);
     opacity: 0;
+    @include md {
+      opacity: 1;
+    }
+    @include sm {
+      width: 19rem;
+      height: 17rem;
+    }
 
     h4 {
       font-size: $card-title;
