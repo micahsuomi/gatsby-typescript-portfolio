@@ -4,23 +4,17 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(rgba(0, 0, 0, 0.9)),
-    to(rgba(92, 61, 61, 0.8))
-  );
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(92, 61, 61, 0.8)));
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(92, 61, 61, 0.8));
-  padding: 1rem 2rem;
+  padding: 5rem 2rem;
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -29,17 +23,24 @@
 
 .portfolio-item {
   padding: 2rem 3rem;
-  width: 77vw;
+  width: 90vw;
   background-color: #fafafa;
   border: 1px solid rgba(211, 211, 211, 0.5);
   -webkit-box-shadow: 0 12px 15px 0 rgba(51, 51, 51, 0.1);
-  box-shadow: 0 12px 15px 0 rgba(51, 51, 51, 0.1);
+          box-shadow: 0 12px 15px 0 rgba(51, 51, 51, 0.1);
   -webkit-transform: scale(1);
-  transform: scale(1);
+          transform: scale(1);
   -webkit-transition: -webkit-transform 0.35s ease-in-out;
   transition: -webkit-transform 0.35s ease-in-out;
   transition: transform 0.35s ease-in-out;
   transition: transform 0.35s ease-in-out, -webkit-transform 0.35s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .portfolio-item {
+    padding: 2rem 2rem;
+    width: 97vw;
+  }
 }
 
 .portfolio-item__exit {
@@ -47,11 +48,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .portfolio-item__exit a {
@@ -60,11 +61,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .portfolio-item__exit .exit-icon {
@@ -75,11 +76,18 @@
 .portfolio-item__content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr) [2];
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media (max-width: 576px) {
+  .portfolio-item__content {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 .portfolio-item__portfolioDetail {
@@ -90,22 +98,29 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 576px) {
+  .portfolio-item__portfolioDetail {
+    -ms-grid-row: 2;
+    grid-row: 2/2;
+  }
 }
 
 .portfolio-item__portfolioDetail img {
-  width: 80%;
+  width: 60%;
   -webkit-box-shadow: 0 12px 15px 0 rgba(51, 51, 51, 0.1);
-  box-shadow: 0 12px 15px 0 rgba(51, 51, 51, 0.1);
+          box-shadow: 0 12px 15px 0 rgba(51, 51, 51, 0.1);
   -webkit-transform: scale(1);
-  transform: scale(1);
+          transform: scale(1);
   -webkit-transition: -webkit-transform 0.35s ease-in-out;
   transition: -webkit-transform 0.35s ease-in-out;
   transition: transform 0.35s ease-in-out;
@@ -115,15 +130,15 @@
 .portfolio-item__tech-container {
   display: inline-block;
   overflow: hidden;
-  height: 65%;
-  width: 65%;
+  height: 3rem;
+  width: 3.5rem;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .portfolio-item__tech-container img {
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 100%;
 }
@@ -145,13 +160,33 @@
   list-style: none;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr) [4];
-  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .portfolio-item__techs {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio-item__techs {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    margin-left: -2rem;
+  }
+}
+
+.portfolio-item__techs p {
+  font-size: 14.5px;
 }
 
 .portfolio-item__prevNext-wrapper {
@@ -159,17 +194,16 @@
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 58vw;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 75vw;
   margin-top: 2rem;
 }
 
 .portfolio-item__prevNext-wrapper a {
   text-decoration: none;
-  color: white;
   margin-left: 2rem;
 }
 
@@ -178,6 +212,6 @@
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
 }
 /*# sourceMappingURL=styles.css.map */

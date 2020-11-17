@@ -47,6 +47,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include sm {
+      grid-row: 2/2;
+    }
 
     img {
       width: 60%;
@@ -86,6 +89,10 @@
     flex-wrap: wrap;
     @include md {
       grid-template-columns: repeat(3, 1fr);
+    }
+    @include sm {
+      grid-template-columns: repeat(2, 1fr);
+      margin-left: -2rem;
     }
 
     p {

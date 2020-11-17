@@ -143,7 +143,7 @@
     justify-items: center;
     grid-gap: 1em;
     img {
-      width: 60%;
+      width: 45%;
     }
   }
   &__skill-list--backend {
@@ -158,8 +158,9 @@
     align-items: center;
     justify-items: center;
     grid-gap: 1em;
+    margin-top: 1rem;
     img {
-      width: 60%;
+      width: 53%;
     }
   }
   &__skill-list--databases {
@@ -175,12 +176,13 @@
     justify-items: center;
     grid-gap: 1em;
     width: 90.3vw;
+    margin-top: 1rem;
     @include sm {
       grid-template-columns: repeat(2, 1fr);
 
     }
     img {
-      width: 60%;
+      width: 41%;
     }
   }
   &__skill-list--devops {

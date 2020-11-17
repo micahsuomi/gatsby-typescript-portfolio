@@ -9,7 +9,7 @@ import EducationItem from '../../components/educationitem'
 const Education = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulEducationCourses {
+      allContentfulEducationCourses(sort: { fields: date, order: DESC }) {
         edges {
           node {
             title

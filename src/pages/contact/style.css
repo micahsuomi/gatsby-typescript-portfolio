@@ -1,0 +1,115 @@
+.contact {
+  padding: 4rem 5rem;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 3rem 1rem;
+  }
+}
+
+.contact__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 12px 15px 0 rgba(51, 51, 51, 0.1);
+          box-shadow: 0 12px 15px 0 rgba(51, 51, 51, 0.1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.35s ease-in-out;
+  transition: -webkit-transform 0.35s ease-in-out;
+  transition: transform 0.35s ease-in-out;
+  transition: transform 0.35s ease-in-out, -webkit-transform 0.35s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .contact__container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact__container {
+    margin: -1rem;
+    padding: 2rem 0;
+  }
+}
+
+.contact__left {
+  line-height: 1.8;
+  padding: 2rem;
+  background-color: #332a2a;
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .contact__left {
+    width: 70vw;
+    -ms-grid-row: 2;
+    grid-row: 2/2;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact__left {
+    width: 30rem;
+    height: 30rem;
+  }
+}
+
+.contact__info {
+  list-style: none;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.contact__social-wrapper {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact__social-wrapper li a {
+  color: white;
+  margin: 0.4rem;
+}
+
+.contact__right {
+  padding: 0;
+  height: 31rem;
+}
+
+.contact .social-icon {
+  color: white;
+  margin: 0.5rem;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,49 @@
+.icon-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 576px) {
+  .icon-card {
+    padding: 1rem;
+  }
+}
+
+.icon-card h4 {
+  margin-top: 1rem;
+}
+
+.icon-card p {
+  font-size: 16px;
+}
+
+.icon-card__image {
+  background-image: linear-gradient(120deg, #9becd4 0%, #46dfdf 100%);
+  width: 8rem;
+  height: 8rem;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  text-align: center;
+  margin: auto auto;
+  position: relative;
+}
+
+.icon-card__image img {
+  color: var(--light);
+  position: absolute;
+  opacity: 0.9;
+  width: 23%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+/*# sourceMappingURL=style.css.map */

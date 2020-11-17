@@ -26,6 +26,9 @@
     height: 17rem;
     width: 100%;
     object-fit: cover;
+    @include sm {
+      height: 19rem;
+    }
 
     img {
       object-fit: cover;
@@ -52,7 +55,7 @@
     }
     @include sm {
       width: 19rem;
-      height: 17rem;
+      height: 19rem;
     }
 
     h4 {
