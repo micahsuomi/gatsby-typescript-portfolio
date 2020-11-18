@@ -38,4 +38,28 @@ module.exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+  const blogTemplate = path.resolve('./src/templates/blog/index.tsx')
+  const blogPostData = await graphql(`
+    query {
+      allContentfulBlogPost(sort: { fields: date, order: DESC }) {
+        edges {
+          node {
+            slug
+            title
+          }
+        }
+      }
+    }
+  `)
+  const blog = blogPostData.data.allContentfulBlogPost.edges
+  blog.forEach((edge) => {
+    createPage({
+      component: blogTemplate,
+      path: `/blog/${edge.node.slug}`,
+      context: {
+        slug: edge.node.slug,
+        url: `/blog/${edge.node.slug}`,
+      },
+    })
+  })
 }

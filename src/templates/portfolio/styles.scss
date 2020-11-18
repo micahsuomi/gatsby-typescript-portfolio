@@ -52,21 +52,17 @@
     }
 
     img {
-      width: 60%;
+      width: 100%;
       @include shadow-trans;
+    }
+    p {
+      margin-top: 1rem;
     }
   }
 
   &__tech-container {
-    display: inline-block;
-    overflow: hidden;
-    height: 3rem;
-    width: 3.5rem;
-    object-fit: cover;
-
     img {
-      object-fit: cover;
-      width: 100%;
+      width: 40%;
       height: 100%;
     }
   }
@@ -86,7 +82,7 @@
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
     justify-items: center;
-    flex-wrap: wrap;
+    text-align: center;
     @include md {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -98,6 +94,19 @@
     p {
       font-size: 14.5px;
     }
+  }
+  &__btn-wrapper {
+    @include flex-property-row-center;
+    button {
+     @include primary-btn;
+     margin: .6rem;
+     width: 8rem;
+     padding: .8rem;
+
+  }
+      
+      
+    
   }
   &__prevNext-wrapper {
     display: flex;

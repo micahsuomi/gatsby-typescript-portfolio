@@ -16,7 +16,12 @@ const PortfolioItem = ({
     <div className="portfolio-card">
       {image && (
         <div className="portfolio-card__image-container show">
-          <Img fluid={image.fluid} key={image.fluid.src} alt={title} />
+          <Img
+            fluid={image.fluid}
+            key={image.fluid.src}
+            alt={title}
+            className="gatsby-wrapper-image--portfolio"
+          />
         </div>
       )}
       <div className="portfolio-card__content hide">

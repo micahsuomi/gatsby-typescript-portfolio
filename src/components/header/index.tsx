@@ -117,9 +117,9 @@ const Header = ({ siteTitle }: HeaderProps) => {
               className={headerStyles.navLink}
               activeStyle={headerActive}
               partiallyActive={true}
-              to="/contact"
+              to="/blog"
             >
-              Contact
+              Blog
             </Link>
           </li>
           <li className={headerStyles.navItem}>
@@ -127,9 +127,9 @@ const Header = ({ siteTitle }: HeaderProps) => {
               className={headerStyles.navLink}
               activeStyle={headerActive}
               partiallyActive={true}
-              to="/blog"
+              to="/contact"
             >
-              Blog
+              Contact
             </Link>
           </li>
         </ul>

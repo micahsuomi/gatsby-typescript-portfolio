@@ -1,0 +1,46 @@
+@import '../../scss/main.scss';
+
+.blog {
+  // background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+  // background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(92, 61, 61, 0.8));
+  background-color: $color-light-grey;
+  background-position: center;
+  background-size: cover;
+  margin-top: 2rem;
+  padding: 3rem 5rem;
+  position: relative;
+  -webkit-clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
+  @include md {
+    padding: 2rem 1rem;
+  }
+  @include sm {
+    padding: 5rem 1rem;
+  }
+  @include ssm {
+    padding: 5rem 0;
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 4rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+    color: $primary-color;
+  }
+
+  &__wrapper {
+    @include flex-property-column;
+    margin-top: 2rem;
+    padding: 3rem 1rem;
+    justify-items: center;
+    align-items: center;
+    width: 80vw;
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+  }
+}

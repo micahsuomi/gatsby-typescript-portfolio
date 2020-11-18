@@ -6,8 +6,10 @@ module.exports = {
     description: `michele-zucca-portfolio`,
     author: `@michelezucca`,
     type: process.env.GATSBY_ACTIVE_ENV || 'staging',
-    siteUrl: `https://www.your-app-domain.netlify.app/`,
+    siteUrl: `https://practical-albattani-477e3c.netlify.app/`,
     hostname: `your-app-domain.netlify.app`,
+    siteUrl: `https://practical-albattani-477e3c.netlify.app/`,
+    twitterHandle: "@michelezucca-portfoliohata",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

@@ -26,6 +26,13 @@ export type EducationItemProps = {
   description: any
   options: any
 }
+export type BlogItemProps = {
+  title: string
+  slug: string
+  tags: string[]
+  image: any
+  date: string
+}
 export type FooterProps = {
   copyright: string
   github: string

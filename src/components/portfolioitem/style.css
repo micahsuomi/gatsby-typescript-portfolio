@@ -13,7 +13,7 @@
       -ms-flex-align: center;
           align-items: center;
   background-color: white;
-  border-radius: 3px;
+  border-radius: 25px;
   width: 16rem;
   height: 17rem;
   text-align: center;
@@ -75,13 +75,17 @@
   overflow: hidden;
 }
 
+.portfolio-card .gatsby-wrapper-image--portfolio {
+  height: 18rem;
+}
+
 .portfolio-card__content {
   padding: 1rem 2rem;
   background-color: black;
   position: absolute;
   width: 16rem;
   height: 17rem;
-  border-radius: 3px;
+  border-radius: 25px;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -127,7 +131,7 @@
 
 .portfolio-card__content button {
   width: 10rem;
-  background: #451453;
+  background-color: #ff008c;
   padding: 0.3rem;
   text-transform: uppercase;
   border: none;

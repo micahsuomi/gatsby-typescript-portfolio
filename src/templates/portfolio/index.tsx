@@ -28,6 +28,8 @@ export const query = graphql`
         }
       }
       tech
+      demoLink
+      githubLink
     }
   }
 `
@@ -43,19 +45,24 @@ const Portfolio = (props: any) => {
       },
     },
   }
-  const previousPortfolio = props.pageContext.previous
-    ? {
-        url: `/portfolio/${props.pageContext.previous.slug}`,
-        title: props.pageContext.previous.title,
-      }
-    : null
+  const previousPortfolio = props.pageContext.previous && {
+    url: `/portfolio/${props.pageContext.previous.slug}`,
+    title: props.pageContext.previous.title,
+  }
 
-  const nextPortfolio = props.pageContext.next
-    ? {
-        url: `/portfolio/${props.pageContext.next.slug}`,
-        title: props.pageContext.next.title,
-      }
-    : null
+  const nextPortfolio = props.pageContext.next && {
+    url: `/portfolio/${props.pageContext.next.slug}`,
+    title: props.pageContext.next.title,
+  }
+  const {
+    title,
+    subtitle,
+    description,
+    techImage,
+    tech,
+    demoLink,
+    githubLink,
+  } = props.data.contentfulPortfolio
   return (
     <Layout>
       <div className="portfolio-template">
@@ -68,16 +75,13 @@ const Portfolio = (props: any) => {
           </div>
           <div className="portfolio-item__content">
             <div className="portfolio-item__portfolioDetail">
-              {documentToReactComponents(
-                props.data.contentfulPortfolio.description.json,
-                options,
-              )}
+              {documentToReactComponents(description.json, options)}
             </div>
             <div>
-              <h3>{props.data.contentfulPortfolio.title}</h3>
-              <h4>{props.data.contentfulPortfolio.subtitle}</h4>
+              <h3>{title}</h3>
+              <h4>{subtitle}</h4>
               <ul className="portfolio-item__techs">
-                {props.data.contentfulPortfolio.techImage.map((t: any) => (
+                {techImage.map((t: any) => (
                   <li key={t} className="portfolio-item__tech-container">
                     <img src={t.file.url} />
                   </li>
@@ -86,12 +90,20 @@ const Portfolio = (props: any) => {
               <p className="portfolio-item__tech-header">Tech used:</p>
               <ul className="portfolio-item__techs">
                 {' '}
-                {props.data.contentfulPortfolio.tech.map((t: any) => (
+                {tech.map((t: any) => (
                   <li key={t}>
                     <p>{t}</p>
                   </li>
                 ))}
               </ul>
+              <div className="portfolio-item__btn-wrapper">
+                <a href={demoLink} target="blank">
+                  <button>Demo</button>
+                </a>
+                <a href={githubLink} target="blank">
+                  <button>GitHub</button>
+                </a>
+              </div>
             </div>
           </div>
           <div className="portfolio-item__prevNext-wrapper">

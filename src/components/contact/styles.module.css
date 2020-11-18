@@ -65,6 +65,7 @@ label {
   cursor: pointer;
   -webkit-transition: all ease-in-out(0.2s);
   transition: all ease-in-out(0.2s);
+  font-family: 'Montserrat';
 }
 
 .submit-btn:hover {
