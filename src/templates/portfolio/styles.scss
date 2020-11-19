@@ -21,21 +21,24 @@
   }
   &__exit {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
     a {
       text-decoration: none;
+      color: rgb(110, 86, 86);
       @include flex-property-row-center;
     }
     .exit-icon {
       font-size: 2em;
       margin-right: 1rem;
+      color: rgb(110, 86, 86);
     }
   }
   &__content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    align-items: flex-start;
+    // align-items: flex-start;
+    align-items: center;
     @include sm {
       grid-template-columns: 1fr;
     }
@@ -101,7 +104,7 @@
      @include primary-btn;
      margin: .6rem;
      width: 8rem;
-     padding: .8rem;
+     padding: .4rem;
 
   }
       
@@ -110,14 +113,18 @@
   }
   &__prevNext-wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    width: 75vw;
+    width: 81vw;
     margin-top: 2rem;
 
     a {
       text-decoration: none;
       margin-left: 2rem;
+      display: flex;
+      align-items: center;
+      color: rgb(110, 86, 86);
+
     }
   }
   &__prevNext {

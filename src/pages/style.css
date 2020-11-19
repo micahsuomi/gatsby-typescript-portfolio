@@ -21,8 +21,8 @@
   grid-column: 1 / 5;
   background-size: cover;
   background-position: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(91, 26, 134, 0.9)), to(rgba(27, 24, 27, 0.8))), url("../imgs/app-1-big.jpg");
-  background-image: linear-gradient(rgba(91, 26, 134, 0.9), rgba(27, 24, 27, 0.8)), url("../imgs/app-1-big.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(34, 33, 33, 0.8))), url("../imgs/app-1-big.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/app-1-big.jpg");
 }
 
 @media (max-width: 768px) {
@@ -35,19 +35,19 @@
 
 .frontpage .image-2 {
   -ms-grid-row: 1;
-  -ms-grid-row-span: 3;
-  grid-row: 1 / 4;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
   -ms-grid-column: 5;
   -ms-grid-column-span: 3;
   grid-column: 5 / 8;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(98, 66, 99, 0.8))), url("../imgs/profile1.png");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(98, 66, 99, 0.8)), url("../imgs/profile1.png");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(34, 33, 33, 0.8))), url("../imgs/code2.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/code2.jpg");
   background-size: cover;
   background-position: center;
 }
 
 @media (max-width: 768px) {
-  .frontpage .image-3 {
+  .frontpage .image-2 {
     -ms-grid-column: 5;
     -ms-grid-column-span: 5;
     grid-column: 5 / 10;
@@ -56,13 +56,13 @@
 
 .frontpage .image-3 {
   -ms-grid-row: 1;
-  -ms-grid-row-span: 4;
-  grid-row: 1 / 5;
+  -ms-grid-row-span: 3;
+  grid-row: 1 / 4;
   -ms-grid-column: 8;
   -ms-grid-column-span: 3;
   grid-column: 8 / 11;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(34, 33, 33, 0.8))), url("../imgs/app-13.png");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/app-13.png");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(34, 33, 33, 0.8))), url("../imgs/profile-int.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/profile-int.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -72,14 +72,14 @@
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1 / 4;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(34, 33, 33, 0.8))), url("../imgs/app-4-big.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/app-4-big.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(34, 33, 33, 0.8))), url("../imgs/app-13.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/app-13.png");
   background-size: cover;
   background-position: center;
 }
 
 @media (max-width: 768px) {
-  .frontpage .image-5 {
+  .frontpage .image-4 {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-column: 1 / 3;
@@ -87,14 +87,14 @@
 }
 
 .frontpage .image-6 {
-  -ms-grid-row: 4;
-  -ms-grid-row-span: 2;
-  grid-row: 4 / 6;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  grid-row: 3 / 6;
   -ms-grid-column: 4;
   -ms-grid-column-span: 3;
   grid-column: 4 / 7;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(91, 26, 134, 0.9)), to(rgba(27, 24, 27, 0.8))), url("../imgs/background2.jpg");
-  background-image: linear-gradient(rgba(91, 26, 134, 0.9), rgba(27, 24, 27, 0.8)), url("../imgs/background2.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(34, 33, 33, 0.8))), url("../imgs/background2.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/background2.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -114,28 +114,28 @@
   -ms-grid-column: 4;
   -ms-grid-column-span: 3;
   grid-column: 4 / 7;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(91, 26, 134, 0.9)), to(rgba(27, 24, 27, 0.8))), url("../imgs/profile3.png");
-  background-image: linear-gradient(rgba(91, 26, 134, 0.9), rgba(27, 24, 27, 0.8)), url("../imgs/profile3.png");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(34, 33, 33, 0.8))), url("../imgs/profile3.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/profile3.png");
   background-size: cover;
   background-position: center;
 }
 
 .frontpage .image-8 {
-  grid-row: 4 / -1;
-  -ms-grid-column: 8;
+  grid-row: 3 / -1;
+  -ms-grid-column: 7;
   -ms-grid-column-span: 1;
-  grid-column: 8 / 9;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(91, 26, 134, 0.9)), to(rgba(27, 24, 27, 0.8))), url("../imgs/profile1.png");
-  background-image: linear-gradient(rgba(91, 26, 134, 0.9), rgba(27, 24, 27, 0.8)), url("../imgs/profile1.png");
+  grid-column: 7 / 8;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(34, 33, 33, 0.8))), url("../imgs/profile3.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/profile3.png");
   background-size: cover;
   background-position: center;
 }
 
 .frontpage .image-9 {
-  grid-row: 3 / -1;
-  grid-column: 9 / -1;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(91, 26, 134, 0.9)), to(rgba(27, 24, 27, 0.8))), url("../imgs/profile1.png");
-  background-image: linear-gradient(rgba(91, 26, 134, 0.9), rgba(27, 24, 27, 0.8)), url("../imgs/profile1.png");
+  grid-row: 4 / -1;
+  grid-column: 8 / -1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(34, 33, 33, 0.8))), url("../imgs/code4.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/code4.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -156,19 +156,18 @@
           flex-direction: column;
   position: absolute;
   top: 30%;
-  left: 28%;
+  left: 30%;
   z-index: 1;
 }
 
 .frontpage__wrapper h1,
 .frontpage__wrapper h2 {
-  color: var(--light);
   font-weight: 500;
-  color: white;
+  color: whitesmoke;
 }
 
 .frontpage__wrapper h1 {
-  font-size: 50px;
+  font-size: 45px;
 }
 
 @media (max-width: 576px) {

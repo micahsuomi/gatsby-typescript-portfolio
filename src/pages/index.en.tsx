@@ -22,30 +22,10 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" lang="en" description="home page" />
       <div className="frontpage">
-        <div
-          className="front-gallery-image image-1"
-          data-sal="flip-right"
-          data-sal-delay="300"
-          data-sal-easing="ease"
-        ></div>
-        <div
-          className="front-gallery-image image-2"
-          data-sal="flip-right"
-          data-sal-delay="300"
-          data-sal-easing="ease"
-        ></div>
-        <div
-          className="front-gallery-image image-3"
-          data-sal="zoom-in"
-          data-sal-delay="200"
-          data-sal-easing="ease"
-        ></div>
-        <div
-          className="front-gallery-image image-4"
-          data-sal="flip-right"
-          data-sal-delay="300"
-          data-sal-easing="ease"
-        ></div>
+        <div className="front-gallery-image image-1"></div>
+        <div className="front-gallery-image image-2"></div>
+        <div className="front-gallery-image image-3"></div>
+        <div className="front-gallery-image image-4"></div>
         <div>
           <div
             className="frontpage__wrapper"
@@ -64,25 +44,10 @@ const IndexPage = () => {
             </div>
           </div>
         </div>
-        <div
-          className="front-gallery-image image-6"
-          data-sal="flip-right"
-          data-sal-delay="100"
-          data-sal-easing="ease"
-        ></div>
+        <div className="front-gallery-image image-6"></div>
         {/* <div class="front-gallery-image image-7" data-aos="flip-up"></div> */}
-        <div
-          className="front-gallery-image image-8"
-          data-sal="flip-right"
-          data-sal-delay="100"
-          data-sal-easing="ease"
-        ></div>
-        <div
-          className="front-gallery-image image-9"
-          data-sal="flip-right"
-          data-sal-delay="100"
-          data-sal-easing="ease"
-        ></div>
+        <div className="front-gallery-image image-8"></div>
+        <div className="front-gallery-image image-9"></div>
       </div>
       <Link to="/page-2/">Go to page 2</Link>
     </Layout>

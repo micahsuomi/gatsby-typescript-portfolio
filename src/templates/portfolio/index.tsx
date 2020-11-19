@@ -80,13 +80,13 @@ const Portfolio = (props: any) => {
             <div>
               <h3>{title}</h3>
               <h4>{subtitle}</h4>
-              <ul className="portfolio-item__techs">
+              {/* <ul className="portfolio-item__techs">
                 {techImage.map((t: any) => (
                   <li key={t} className="portfolio-item__tech-container">
                     <img src={t.file.url} />
                   </li>
                 ))}
-              </ul>
+              </ul> */}
               <p className="portfolio-item__tech-header">Tech used:</p>
               <ul className="portfolio-item__techs">
                 {' '}
@@ -107,7 +107,7 @@ const Portfolio = (props: any) => {
             </div>
           </div>
           <div className="portfolio-item__prevNext-wrapper">
-            <div className="portfolio-item__prevNext">
+            <div className="portfolio-item__prevNext grow">
               <div>
                 {previousPortfolio && (
                   <Link to={previousPortfolio.url}>
@@ -116,8 +116,6 @@ const Portfolio = (props: any) => {
                   </Link>
                 )}
               </div>
-            </div>
-            <div className="portfolio-item__prevNext">
               <div>
                 {previousPortfolio && (
                   <div>
@@ -127,6 +125,8 @@ const Portfolio = (props: any) => {
                   </div>
                 )}
               </div>
+            </div>
+            <div className="portfolio-item__prevNext grow">
               <div>
                 {nextPortfolio && (
                   <div>
