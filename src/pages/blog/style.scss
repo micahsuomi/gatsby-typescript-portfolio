@@ -35,7 +35,6 @@
     padding: 3rem 1rem;
     justify-items: center;
     align-items: center;
-    width: 80vw;
     @include md {
       grid-template-columns: repeat(2, 1fr);
     }

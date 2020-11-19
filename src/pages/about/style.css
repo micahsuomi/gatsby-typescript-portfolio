@@ -19,11 +19,12 @@
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+  padding: 2rem 0;
 }
 
 @media (max-width: 768px) {
   .about {
-    padding: 2rem 0;
+    padding: 6rem 0;
   }
 }
 
@@ -31,6 +32,7 @@
   .about {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    padding: 5rem 0;
   }
 }
 
@@ -156,6 +158,12 @@
   margin-top: 2rem;
 }
 
+@media (max-width: 576px) {
+  .about__skills-wrapper h3 {
+    margin-top: 0;
+  }
+}
+
 .about__skills-frontend-container {
   background-color: grey;
   color: white;
@@ -196,6 +204,15 @@
   padding: 2rem 3rem;
 }
 
+@media (max-width: 576px) {
+  .about__skills-devops-container {
+    padding: 2rem 2rem;
+    height: 53vh;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 49% 93%, 0 100%, 0 0);
+            clip-path: polygon(100% 0, 100% 100%, 49% 93%, 0 100%, 0 0);
+  }
+}
+
 .about__skill-image--frontend, .about__skill-list--frontend {
   display: -ms-grid;
   display: grid;
@@ -217,6 +234,12 @@
 
 .about__skill-image--frontend img, .about__skill-list--frontend img {
   width: 60%;
+}
+
+@media (max-width: 576px) {
+  .about__skill-image--frontend img, .about__skill-list--frontend img {
+    width: 46%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -256,6 +279,12 @@
 }
 
 @media (max-width: 576px) {
+  .about__skill-image--backend img, .about__skill-list--backend img {
+    width: 83%;
+  }
+}
+
+@media (max-width: 576px) {
   .about__skill-list--backend {
     display: none;
   }
@@ -276,6 +305,12 @@
 
 .about__skill-image--databases img, .about__skill-list--databases img {
   width: 53%;
+}
+
+@media (max-width: 576px) {
+  .about__skill-image--databases img, .about__skill-list--databases img {
+    width: 83%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -307,6 +342,12 @@
 
 .about__skill-image--devops img, .about__skill-list--devops img {
   width: 41%;
+}
+
+@media (max-width: 576px) {
+  .about__skill-image--devops img, .about__skill-list--devops img {
+    width: 35%;
+  }
 }
 
 .about__skill-list--devops {

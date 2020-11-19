@@ -53,7 +53,6 @@
     @include sm {
       grid-row: 2/2;
     }
-
     img {
       width: 100%;
       @include shadow-trans;
@@ -62,7 +61,6 @@
       margin-top: 1rem;
     }
   }
-
   &__tech-container {
     img {
       width: 40%;
@@ -93,7 +91,6 @@
       grid-template-columns: repeat(2, 1fr);
       margin-left: -2rem;
     }
-
     p {
       font-size: 14.5px;
     }
@@ -105,11 +102,7 @@
      margin: .6rem;
      width: 8rem;
      padding: .4rem;
-
   }
-      
-      
-    
   }
   &__prevNext-wrapper {
     display: flex;
@@ -117,14 +110,12 @@
     align-items: center;
     width: 81vw;
     margin-top: 2rem;
-
     a {
       text-decoration: none;
       margin-left: 2rem;
       display: flex;
       align-items: center;
       color: rgb(110, 86, 86);
-
     }
   }
   &__prevNext {

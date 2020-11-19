@@ -13,6 +13,9 @@
     0 15%
   );
   clip-path: polygon(50% 0, 100% 15%, 100% 100%, 50% 100%, 0 100%, 0 15%);
+  @include sm {
+    padding: .8rem;
+  }
   &__grid {
     display: flex;
     justify-content: space-between;

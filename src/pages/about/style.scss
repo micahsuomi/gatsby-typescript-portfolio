@@ -5,14 +5,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // flex-direction: column;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  padding: 2rem 0;
   @include md {
-    padding: 2rem 0;
+    padding: 6rem 0;
   }
   @include sm {
     grid-template-columns: 1fr;
+    padding: 5rem 0;
   }
   &__img-container {
     @include md {
@@ -76,6 +77,9 @@
     h3 {
       text-align: center;
       margin-top: 2rem;
+      @include sm {
+        margin-top: 0;
+      }
     }
   }
   &__skills-frontend-container {
@@ -107,7 +111,13 @@
     color: white;
     width: 100vw;
     padding: 2rem 3rem;
+    @include sm {
+      padding: 2rem 2rem;
+      height: 53vh;
+      clip-path: polygon(100% 0, 100% 100%, 49% 93%, 0 100%, 0 0);
+    }
   }
+ 
   &__skill-image--frontend,
   &__skill-list--frontend {
     display: grid;
@@ -120,7 +130,11 @@
     }
     img {
       width: 60%;
+      @include sm {
+        width: 46%;
+      }
     }
+    
   }
   &__skill-list--frontend {
     @include sm {
@@ -144,6 +158,9 @@
     grid-gap: 1em;
     img {
       width: 45%;
+      @include sm {
+        width: 83%;
+      }
     }
   }
   &__skill-list--backend {
@@ -161,6 +178,9 @@
     margin-top: 1rem;
     img {
       width: 53%;
+      @include sm {
+        width: 83%;
+      }
     }
   }
   &__skill-list--databases {
@@ -183,6 +203,9 @@
     }
     img {
       width: 41%;
+      @include sm {
+        width: 35%;
+      }
     }
   }
   &__skill-list--devops {
