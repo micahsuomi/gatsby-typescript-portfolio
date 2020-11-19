@@ -133,7 +133,7 @@ const AboutPage = () => {
           )}
         </div>
       </div>
-      <div className="about__iconswrapper" data-aos="flip-right">
+      <div className="about__iconswrapper">
         {data.allContentfulAboutMeSkills.edges.map((edge: any) => {
           const { slug, image, title, description, options } = edge.node
           return (
@@ -151,7 +151,7 @@ const AboutPage = () => {
         <div
           className="about__skills-frontend-container"
           data-sal="flip-left"
-          data-sal-delay="300"
+          data-sal-delay="100"
           data-sal-easing="ease"
         >
           {data.allContentfulFrontEndSkills.edges.map((edge: any) => {
@@ -177,7 +177,7 @@ const AboutPage = () => {
           <div
             className="about__skills-backend-container"
             data-sal="flip-right"
-            data-sal-delay="300"
+            data-sal-delay="100"
             data-sal-easing="ease"
           >
             {data.allContentfulBackendSkills.edges.map((edge: any) => {
@@ -202,7 +202,7 @@ const AboutPage = () => {
           <div
             className="about__skills-database-container"
             data-sal="flip-left"
-            data-sal-delay="300"
+            data-sal-delay="100"
             data-sal-easing="ease"
           >
             {data.allContentfulDatabaseSkills.edges.map((edge: any) => {

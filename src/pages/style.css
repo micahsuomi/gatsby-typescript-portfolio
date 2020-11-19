@@ -10,6 +10,7 @@
   -ms-grid-columns: (10vw)[10];
       grid-template-columns: repeat(10, 10vw);
   position: relative;
+  margin-top: 3rem;
 }
 
 .frontpage .image-1 {
@@ -19,10 +20,10 @@
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-column: 1 / 5;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(34, 33, 33, 0.8))), url("../imgs/code2.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/code2.jpg");
   background-size: cover;
   background-position: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(34, 33, 33, 0.8))), url("../imgs/app-1-big.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/app-1-big.jpg");
 }
 
 @media (max-width: 768px) {
@@ -46,8 +47,8 @@
   -ms-grid-column: 5;
   -ms-grid-column-span: 3;
   grid-column: 5 / 8;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(34, 33, 33, 0.8))), url("../imgs/code2.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/code2.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(34, 33, 33, 0.8))), url("../imgs/app-2-big.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/app-2-big.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -200,7 +201,7 @@
 
 @media (max-width: 768px) {
   .frontpage__wrapper {
-    top: 36%;
+    top: 40%;
     left: 19%;
   }
 }

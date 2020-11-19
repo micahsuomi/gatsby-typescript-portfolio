@@ -16,14 +16,15 @@
   grid-template-rows: repeat(5, 1fr);
   grid-template-columns: repeat(10, 10vw); 
   position: relative;
+  margin-top: 3rem;
 
   .image-1 {
     grid-row: 1 / 3;
     grid-column: 1 / 5;
     // background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/background2.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/code2.jpg");
     background-size: cover;
     background-position: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/app-1-big.jpg");
     @include md {
       grid-column: 1 / 7;
     }
@@ -35,7 +36,7 @@
 .image-2 {
     grid-row: 1 / 3;
     grid-column: 5 / 8;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/code2.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/app-2-big.jpg");
     background-size: cover;
     background-position: center;
     @include md {
@@ -127,7 +128,7 @@
     left: 30%;
     z-index: 1;
     @include md {
-      top: 36%;
+      top: 40%;
       left: 19%;
     }
     @include sm {

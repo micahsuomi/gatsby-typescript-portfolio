@@ -10,7 +10,7 @@ const IconCard = ({ title, image, description, options }: IconCardProps) => {
     <div
       className="icon-card"
       data-sal="flip-right"
-      data-sal-delay="300"
+      data-sal-delay="200"
       data-sal-easing="ease"
     >
       <div className="icon-card__image">
