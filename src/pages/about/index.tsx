@@ -108,14 +108,24 @@ const AboutPage = () => {
     <Layout>
       <Head title="About" />
       <div className="about">
-        <div className="about__img-container">
+        <div
+          className="about__img-container"
+          data-sal="zoom-in"
+          data-sal-delay="300"
+          data-sal-easing="ease"
+        >
           <Img
             fluid={data.contentfulAbout.image.fluid}
             key={data.contentfulAbout.image.fluid.src}
             alt={data.contentfulAbout.title}
           />
         </div>
-        <div className="about__content">
+        <div
+          className="about__content"
+          data-sal="zoom-in"
+          data-sal-delay="300"
+          data-sal-easing="ease"
+        >
           <h2>{data.contentfulAbout.title}</h2>
           {documentToReactComponents(
             data.contentfulAbout.description.json,
@@ -138,7 +148,12 @@ const AboutPage = () => {
         })}
       </div>
       <div className="about__skills-wrapper">
-        <div className="about__skills-frontend-container">
+        <div
+          className="about__skills-frontend-container"
+          data-sal="flip-left"
+          data-sal-delay="300"
+          data-sal-easing="ease"
+        >
           {data.allContentfulFrontEndSkills.edges.map((edge: any) => {
             const { title, images, list } = edge.node
             return (
@@ -159,7 +174,12 @@ const AboutPage = () => {
           })}
         </div>
         <div className="about__skills-nested">
-          <div className="about__skills-backend-container">
+          <div
+            className="about__skills-backend-container"
+            data-sal="flip-right"
+            data-sal-delay="300"
+            data-sal-easing="ease"
+          >
             {data.allContentfulBackendSkills.edges.map((edge: any) => {
               const { title, images, list } = edge.node
               return (
@@ -179,7 +199,12 @@ const AboutPage = () => {
               )
             })}
           </div>
-          <div className="about__skills-database-container">
+          <div
+            className="about__skills-database-container"
+            data-sal="flip-left"
+            data-sal-delay="300"
+            data-sal-easing="ease"
+          >
             {data.allContentfulDatabaseSkills.edges.map((edge: any) => {
               const { title, images, list } = edge.node
               return (
@@ -200,7 +225,12 @@ const AboutPage = () => {
             })}
           </div>
         </div>
-        <div className="about__skills-devops-container">
+        <div
+          className="about__skills-devops-container"
+          data-sal="flip-right"
+          data-sal-delay="100"
+          data-sal-easing="ease"
+        >
           {data.allContentfulDevOpsDeploymentSkills.edges.map((edge: any) => {
             const { title, images, list } = edge.node
             return (

@@ -13,7 +13,12 @@ const PortfolioItem = ({
   image,
 }: PortfolioItemProps) => {
   return (
-    <div className="portfolio-card">
+    <div
+      className="portfolio-card"
+      data-sal="flip-left"
+      data-sal-delay="200"
+      data-sal-easing="ease"
+    >
       {image && (
         <div className="portfolio-card__image-container show">
           <Img
