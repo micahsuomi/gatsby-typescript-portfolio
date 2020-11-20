@@ -6,6 +6,8 @@ import Head from '../../components/head'
 import Layout from '../../components/layout'
 import EducationItem from '../../components/educationitem'
 
+import './style.scss'
+
 const Education = () => {
   const data = useStaticQuery(graphql`
     query {

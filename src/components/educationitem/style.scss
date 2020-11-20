@@ -3,7 +3,7 @@
 .education-card {
   display: grid;
   grid-template-columns: 30% 70%;
-  padding: 2rem 3rem;
+  padding: 1.5rem 2.5rem;
   align-items: center;
   justify-items: center;
   @include shadow-trans;
@@ -20,7 +20,7 @@
     img {
       object-fit: cover;
       width: 80%;
-      height: 93%;
+      height: 80%;
       overflow: hidden;
       @include sm {
         height: 100%;
