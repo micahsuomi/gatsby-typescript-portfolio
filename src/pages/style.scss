@@ -14,7 +14,7 @@
   background-color: black;
   display: grid;
   grid-template-rows: repeat(5, 1fr);
-  grid-template-columns: repeat(10, 10vw); 
+  grid-template-columns: repeat(10, 10vw);
   position: relative;
   margin-top: 3rem;
 
@@ -22,7 +22,8 @@
     grid-row: 1 / 3;
     grid-column: 1 / 5;
     // background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/background2.jpg");
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/code2.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)),
+      url('../imgs/code2.jpg');
     background-size: cover;
     background-position: center;
     @include md {
@@ -31,35 +32,37 @@
     @include sm {
       display: none;
     }
-}
+  }
 
-.image-2 {
+  .image-2 {
     grid-row: 1 / 3;
     grid-column: 5 / 8;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/app-2-big.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)),
+      url('../imgs/app-2-big.jpg');
     background-size: cover;
     background-position: center;
     @include md {
       grid-column: 5 / 10;
     }
     @include sm {
-      grid-column: 1 / 8
+      grid-column: 1 / 8;
     }
-}
+  }
 
-.image-3 {
+  .image-3 {
     grid-row: 1 / 4;
     grid-column: 6 / 11;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/profile-int.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)),
+      url('../imgs/profile-int.jpg');
     background-size: cover;
     background-position: center;
-}
+  }
 
-
-.image-4 {
+  .image-4 {
     grid-row: 3 / -1;
     grid-column: 1 / 4;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/app-13.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)),
+      url('../imgs/app-13.png');
     background-size: cover;
     background-position: center;
     @include md {
@@ -68,55 +71,55 @@
     @include sm {
       grid-column: 1 / 5;
     }
-}
-
-.image-6 {
-  grid-row: 3 / 6;
-  grid-column: 4 / 7;
-  // background-image: linear-gradient(var(--background-hero)), url("../imgs/app-3-big.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/background2.jpg");
-  background-size: cover;
-  background-position: center;
-  @include md {
-    grid-column: 3 / 4;
-  }
-}
-
-.image-7 {
-  grid-row: 5 / 6;
-  grid-column: 4 / 7;
-  // background-image: linear-gradient(var(--background-hero)), url("../imgs/app-7.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/profile3.png");
-  background-size: cover;
-  background-position: center;
-
-}
-
-
-.image-8 {
-  grid-row: 3 / -1;
-  grid-column: 7 / 8;
-  // background-image: linear-gradient(var(--background-hero)), url("../imgs/app-9.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/profile3.png");
-  background-size: cover;
-  background-position: center;
-  @include sm {
-    grid-column: 1 / 6;
-  }
-}
-
-
-.image-9 {
-  grid-row: 4 / -1;
-  grid-column: 8 / -1;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)), url("../imgs/code4.jpg");
-  background-size: cover;
-  background-position: center;
-  @include sm {
-    grid-column: 6 / 11;
   }
 
-}
+  .image-6 {
+    grid-row: 3 / 6;
+    grid-column: 4 / 7;
+    // background-image: linear-gradient(var(--background-hero)), url("../imgs/app-3-big.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)),
+      url('../imgs/background2.jpg');
+    background-size: cover;
+    background-position: center;
+    @include md {
+      grid-column: 3 / 4;
+    }
+  }
+
+  .image-7 {
+    grid-row: 5 / 6;
+    grid-column: 4 / 7;
+    // background-image: linear-gradient(var(--background-hero)), url("../imgs/app-7.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)),
+      url('../imgs/profile3.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .image-8 {
+    grid-row: 3 / -1;
+    grid-column: 7 / 8;
+    // background-image: linear-gradient(var(--background-hero)), url("../imgs/app-9.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)),
+      url('../imgs/profile3.png');
+    background-size: cover;
+    background-position: center;
+    @include sm {
+      grid-column: 1 / 6;
+    }
+  }
+
+  .image-9 {
+    grid-row: 4 / -1;
+    grid-column: 8 / -1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)),
+      url('../imgs/code4.jpg');
+    background-size: cover;
+    background-position: center;
+    @include sm {
+      grid-column: 6 / 11;
+    }
+  }
 
   &__wrapper {
     display: flex;
@@ -167,14 +170,14 @@
     padding: 0.7rem;
     width: 12rem;
     border-radius: 3px;
-    box-shadow: 0 .5rem 2rem rgba(97, 86, 86, 0.6);
+    box-shadow: 0 0.5rem 2rem rgba(97, 86, 86, 0.6);
     text-transform: uppercase;
     color: white;
     cursor: pointer;
     font-family: 'Montserrat';
     @include ssm {
       width: 10rem;
-      padding: .6rem;
+      padding: 0.6rem;
     }
   }
   &__porfolio-link--btn:focus {
@@ -322,7 +325,6 @@
     height: 100vh;
     padding: 0;
   }
-
 
   .front-wrapper {
     grid-column: 1 / -1;

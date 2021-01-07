@@ -33,7 +33,7 @@
   }
   @include md {
     .gatsby-image-wrapper {
-      width: 20rem; 
+      width: 20rem;
       height: 20rem;
     }
   }
@@ -64,8 +64,8 @@
     justify-items: center;
     padding: 4rem 3rem;
     @include md {
-        grid-gap: 1em;
-        padding: 2rem 1rem;
+      grid-gap: 1em;
+      padding: 2rem 1rem;
     }
     @include sm {
       grid-template-columns: 1fr;
@@ -117,7 +117,7 @@
       clip-path: polygon(100% 0, 100% 100%, 49% 93%, 0 100%, 0 0);
     }
   }
- 
+
   &__skill-image--frontend,
   &__skill-list--frontend {
     display: grid;
@@ -134,7 +134,6 @@
         width: 46%;
       }
     }
-    
   }
   &__skill-list--frontend {
     @include sm {
@@ -199,7 +198,6 @@
     margin-top: 1rem;
     @include sm {
       grid-template-columns: repeat(2, 1fr);
-
     }
     img {
       width: 41%;
@@ -210,9 +208,9 @@
   }
   &__skill-list--devops {
     margin-bottom: 3rem;
-      @include sm {
-        display: none;
-      }
+    @include sm {
+      display: none;
+    }
   }
 }
 .wrapper {

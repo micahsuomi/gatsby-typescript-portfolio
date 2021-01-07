@@ -9,6 +9,13 @@ module.exports = {
     siteUrl: `https://michelezuccawebdev.netlify.app/`,
     hostname: `https://michelezuccawebdev.netlify.app/`,
     twitterHandle: '@michelezucca-portfoliohata',
+    keywords: [
+      `michele zucca`,
+      `web developer`,
+      `full-stack development`,
+      `programming`,
+      `integrify`,
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

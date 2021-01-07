@@ -38,11 +38,11 @@
 .portfolio__wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr) [3];
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 3rem;
   -webkit-animation: appear;
-          animation: appear;
+  animation: appear;
   -webkit-transition: all ease-in-out 2s;
   transition: all ease-in-out 2s;
   list-style: none;
@@ -50,21 +50,21 @@
   padding: 3rem 1rem;
   justify-items: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
   .portfolio__wrapper {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr) [2];
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 576px) {
   .portfolio__wrapper {
     -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 /*# sourceMappingURL=style.css.map */

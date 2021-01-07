@@ -52,7 +52,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
     }
   `)
   const blog = blogPostData.data.allContentfulBlogPost.edges
-  blog.forEach((edge) => {
+  blog.forEach(edge => {
     createPage({
       component: blogTemplate,
       path: `/blog/${edge.node.slug}`,
