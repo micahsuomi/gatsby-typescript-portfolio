@@ -2,15 +2,14 @@
 
 .portfolio-card {
   @include flex-property-column;
-  background-color: white;
-  border-radius: 25px;
-  width: 16rem;
-  height: 17rem;
-  text-align: center;
   @include shadow-trans;
+  background-color: white;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
   overflow: hidden;
   position: relative;
-  cursor: pointer;
   @include sm {
     width: 19rem;
     height: 19rem;
@@ -43,17 +42,25 @@
   }
   &__content {
     padding: 1rem 2rem;
-    background-color: rgb(0, 0, 0);
     position: absolute;
-    width: 16rem;
-    height: 17rem;
-    border-radius: 25px;
-    overflow: hidden;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
     @include flex-property-column;
-    background-color: rgba(0, 0, 0, 0.8);
-    opacity: 0;
+    background-color: rgba(20, 19, 19, 0.99);
+    color: black;
+    background-color: white;
+    // opacity: 0;
+    margin-top: 612px;
     @include md {
       opacity: 1;
+      margin-top: 0;
+      background-color: rgba(20, 19, 19, 0.9);
     }
     @include sm {
       width: 19rem;
@@ -63,40 +70,62 @@
     h4 {
       font-size: $card-title;
       margin-top: 0.7rem;
-      color: $color-white;
+      color: black;
+      -webkit-transition: top 0.5s, bottom 0.5s;
+      transition: top 0.5s, bottom 0.5s;
+      @include md {
+        color: white;
+      }
+
     }
     p {
       font-size: $regular-text;
       font-family: 'Montserrat';
-      color: $color-white;
+      color: black;
+      @include md {
+        color: white;
+      }
     }
 
     button {
       width: 10rem;
       // background: rgb(69, 20, 83);
-      background-color: rgb(255, 0, 140);
+      color: rgb(255, 0, 140);
+      border: 2px solid rgb(255, 0, 140);
+      background-color: none;
       padding: 0.3rem;
       text-transform: uppercase;
-      border: none;
       border-radius: 25px;
-      color: white;
       font-family: 'Montserrat';
       cursor: pointer;
       margin-top: .4rem;
     }
+    button:hover {
+      background-color: rgb(255, 0, 140);
+      color: white;
+    }
+    button:active {
+      outline: none;
+    }
   }
-  &__content:hover {
-    opacity: 0.9;
-    transition: all ease-in-out 0.5s;
-    animation-name: appear;
-    animation-timing-function: 0.1s;
-  }
+  
+  
+  
   @keyframes appear {
     from {
       opacity: 0;
     }
     to {
       opacity: 1;
+     
     }
   }
+}
+.portfolio-card:hover .portfolio-card__content  {
+  opacity: 0.95;
+  transition: all ease-in-out .2s;
+  animation: appear;
+  animation-timing-function: 0.2s;
+  margin-top: 0;
+ 
 }

@@ -2,7 +2,8 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-import { FaBackspace, FaChevronRight, FaChevronLeft } from 'react-icons/fa'
+import { FaChevronRight, FaChevronLeft } from 'react-icons/fa'
+import { RiArrowGoBackLine } from 'react-icons/ri'
 
 import Layout from '../../components/layout'
 
@@ -58,7 +59,6 @@ const Portfolio = (props: any) => {
     title,
     subtitle,
     description,
-    techImage,
     tech,
     demoLink,
     githubLink,
@@ -69,7 +69,7 @@ const Portfolio = (props: any) => {
         <div className="portfolio-item">
           <div className="portfolio-item__exit">
             <Link to="/portfolio">
-              <FaBackspace className="exit-icon" />
+              <RiArrowGoBackLine className="exit-icon grow" />
               <span>Back </span>
             </Link>
           </div>
@@ -80,13 +80,6 @@ const Portfolio = (props: any) => {
             <div>
               <h3>{title}</h3>
               <h4>{subtitle}</h4>
-              {/* <ul className="portfolio-item__techs">
-                {techImage.map((t: any) => (
-                  <li key={t} className="portfolio-item__tech-container">
-                    <img src={t.file.url} />
-                  </li>
-                ))}
-              </ul> */}
               <p className="portfolio-item__tech-header">Tech used:</p>
               <ul className="portfolio-item__techs">
                 {' '}
