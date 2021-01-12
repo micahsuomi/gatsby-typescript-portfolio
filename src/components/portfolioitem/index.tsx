@@ -11,6 +11,7 @@ const PortfolioItem = ({
   title,
   subtitle,
   image,
+  demoLink,
 }: PortfolioItemProps) => {
   return (
     <div
@@ -32,8 +33,11 @@ const PortfolioItem = ({
       <div className="portfolio-card__content hide">
         <h4>{title}</h4>
         <p>{subtitle}</p>
+        <a href={demoLink} target="blank">
+          <button className="grow">Demo</button>
+        </a>
         <Link to={`/portfolio/${slug}`}>
-          <button className="grow">View</button>
+          <button className="grow">Details</button>
         </Link>
       </div>
     </div>

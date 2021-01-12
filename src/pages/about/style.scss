@@ -121,7 +121,7 @@
   &__skill-image--frontend,
   &__skill-list--frontend {
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(11, 1fr);
     align-items: center;
     justify-items: center;
     grid-gap: 1em;
@@ -129,9 +129,10 @@
       grid-template-columns: repeat(2, 1fr);
     }
     img {
-      width: 60%;
+      width: 50%;
+      color: white;
       @include sm {
-        width: 46%;
+        width: 40%;
       }
     }
   }
@@ -176,7 +177,7 @@
     grid-gap: 1em;
     margin-top: 1rem;
     img {
-      width: 53%;
+      width: 32%;
       @include sm {
         width: 83%;
       }
@@ -200,7 +201,7 @@
       grid-template-columns: repeat(2, 1fr);
     }
     img {
-      width: 41%;
+      width: 37%;
       @include sm {
         width: 35%;
       }

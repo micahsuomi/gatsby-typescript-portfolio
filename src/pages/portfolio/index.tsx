@@ -28,6 +28,7 @@ const Portfolio = () => {
                 ...GatsbyContentfulFluid
               }
             }
+            demoLink
           }
         }
       }
@@ -42,7 +43,7 @@ const Portfolio = () => {
         <p>{documentToReactComponents(description.json)}</p>
         <div className="portfolio__wrapper">
           {data.allContentfulPortfolio.edges.map((edge: any) => {
-            const { slug, title, subtitle, image } = edge.node
+            const { slug, title, subtitle, image, demoLink } = edge.node
             return (
               <PortfolioItem
                 key={slug}
@@ -50,6 +51,7 @@ const Portfolio = () => {
                 title={title}
                 subtitle={subtitle}
                 image={image}
+                demoLink={demoLink}
               />
             )
           })}

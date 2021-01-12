@@ -93,7 +93,6 @@ const AboutPage = () => {
       }
     }
   `)
-
   const options = {
     renderNode: {
       'embedded-asset-block': (node: any) => {
