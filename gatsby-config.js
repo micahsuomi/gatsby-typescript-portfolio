@@ -1,5 +1,14 @@
 /* eslint-disable prettier/prettier */
 require('dotenv').config()
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = 'https://michelezuccawebdev.netlify.app/',
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
+} = process.env
+const isNetlifyProduction = NETLIFY_ENV === 'production'
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
+
 module.exports = {
   siteMetadata: {
     title: `Michele Zucca`,
@@ -38,7 +47,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://www.your-app-domain.netlify.app/`,
+        siteUrl: `https://michelezuccawebdev.netlify.app/`,
       },
     },
     {
