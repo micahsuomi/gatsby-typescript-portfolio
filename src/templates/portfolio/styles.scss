@@ -9,7 +9,7 @@
   background-position: center;
   position: relative;
   z-index: 3;
-  min-height: 171vh;
+  min-height: 190vh;
   width: 100%;
   animation-name: appear;
   transition: all ease-in-out .2s;
@@ -89,7 +89,7 @@
   &__subtitle {
     align-self: flex-start;
     color: $color-header;
-    margin-left: 1.5rem;
+    margin-left: 2.4rem;
   }
   &__title {
     margin-top: 2rem;
@@ -99,7 +99,8 @@
     text-transform: uppercase;
   }
   hr {
-    width: 90vw;
+    width: 50vw;
+    margin-left: 2.3rem;
   }
   &__subtitle::after {
     height: 2px;
@@ -110,6 +111,10 @@
     @include flex-property-row-center;
     justify-self: flex-start;
     margin-top: 1rem;
+    margin-left: 1.8rem;
+    a {
+      text-decoration: none;
+    }
     button {
       @include primary-btn;
       @include flex-property-row-center;
@@ -137,21 +142,19 @@
     align-items: center;
     justify-items: flex-start;
     text-align: center;
-    @include md {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    @include sm {
-      grid-template-columns: repeat(2, 1fr);
-      margin-left: -2rem;
-    }
+    margin-left: .8rem;
+    list-style-type: disc;
     p {
-      font-size: 14.5px;
-      background-color: rgb(146, 157, 161);
+      font-size: 18.5px;
+      // background-color: rgb(194, 204, 207);
       margin-top: .3rem;
-      padding: .2rem 1.4rem;
+      padding: .2rem 1.2rem;
       border-radius: 5px;
-      color: white;
+      color: $color-text;
     }
+  }
+  &__techs li::before {
+    color: red;
   }
   &__prevNext {
     display: flex;

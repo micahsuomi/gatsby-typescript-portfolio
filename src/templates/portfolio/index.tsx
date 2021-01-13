@@ -115,7 +115,7 @@ const Portfolio = (props: any) => {
               <h3 className="portfolio-item__title">{title}</h3>
               <h4 className="portfolio-item__subtitle">{subtitle}</h4>
             </div>
-            <hr>
+            <hr></hr>
             <div className="portfolio-item__paragraph">
               {documentToReactComponents(description.json)}
             </div>
@@ -144,6 +144,7 @@ const Portfolio = (props: any) => {
               ))}
             </ul>
           </div>
+          <hr></hr>
         </div>
       </div>
       <div className="portfolio-item__next grow">
