@@ -4,6 +4,7 @@ import { graphql, Link } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { FaChevronRight, FaChevronLeft, FaGithub } from 'react-icons/fa'
 import { RiArrowGoBackLine } from 'react-icons/ri'
+import { BsBoxArrowUpRight } from 'react-icons/bs'
 
 import Layout from '../../components/layout'
 
@@ -56,15 +57,6 @@ const Portfolio = (props: any) => {
     setIsNextShowing(false)
   }
 
-  const options = {
-    renderNode: {
-      'embedded-asset-block': (node: any) => {
-        const alt = node.data.target.fields.title['en-US']
-        const url = node.data.target.fields.file['en-US'].url
-        return <img alt={alt} src={url} />
-      },
-    },
-  }
   const previousPortfolio = props.pageContext.previous && {
     url: `/portfolio/${props.pageContext.previous.slug}`,
     title: props.pageContext.previous.title,
@@ -119,32 +111,32 @@ const Portfolio = (props: any) => {
         <div className="portfolio-item animate-appear">
           <div className="portfolio-item__content">
             <div className="portfolio-item__portfolioDetail">
-              <h3>{title}</h3>
-              <h4>{subtitle}</h4>
               <img src={image.file.url} alt={title} />
-              <div className="portfolio-item__btn-wrapper">
-                <a href={demoLink} target="blank">
-                  <button>
-                    Demo
-                    <FaGithub className="portfolio-item__btn-icon" />
-                  </button>
-                </a>
-                <a href={githubLink} target="blank">
-                  <button>
-                    GitHub
-                    <FaGithub className="portfolio-item__btn-icon" />
-                  </button>
-                </a>
-              </div>
+              <h3 className="portfolio-item__title">{title}</h3>
+              <h4 className="portfolio-item__subtitle">{subtitle}</h4>
             </div>
+            <hr>
             <div className="portfolio-item__paragraph">
               {documentToReactComponents(description.json)}
             </div>
+            <div className="portfolio-item__btn-wrapper">
+              <a href={demoLink} target="blank">
+                <button>
+                  <span>Demo</span>
+                  <BsBoxArrowUpRight className="portfolio-item__btn-icon" />
+                </button>
+              </a>
+              <a href={githubLink} target="blank">
+                <button>
+                  <span>GitHub</span>
+                  <FaGithub className="portfolio-item__btn-icon" />
+                </button>
+              </a>
+            </div>
           </div>
           <div>
-            <p className="portfolio-item__tech-header">Tech used:</p>
+            <h4 className="portfolio-item__tech-header">Tech Used</h4>
             <ul className="portfolio-item__techs">
-              {' '}
               {tech.map((t: any) => (
                 <li key={t}>
                   <p>{t}</p>

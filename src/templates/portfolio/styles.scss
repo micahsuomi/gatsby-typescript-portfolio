@@ -9,7 +9,7 @@
   background-position: center;
   position: relative;
   z-index: 3;
-  min-height: 141vh;
+  min-height: 171vh;
   width: 100%;
   animation-name: appear;
   transition: all ease-in-out .2s;
@@ -85,28 +85,57 @@
       height: 100%;
     }
   }
-  h3,
-  h4 {
+  &__title,
+  &__subtitle {
     align-self: flex-start;
     color: $color-header;
     margin-left: 1.5rem;
   }
-  h3 {
+  &__title {
     margin-top: 2rem;
   }
-  h4 {
+  &__subtitle {
     margin-top: -.7rem;
     text-transform: uppercase;
   }
+  hr {
+    width: 90vw;
+  }
+  &__subtitle::after {
+    height: 2px;
+    color: grey;
+    width: 29rem;
+  }
+  &__btn-wrapper {
+    @include flex-property-row-center;
+    justify-self: flex-start;
+    margin-top: 1rem;
+    button {
+      @include primary-btn;
+      @include flex-property-row-center;
+      margin: 0.6rem;
+      width: 9rem;
+      padding: 0.4rem;
+      text-decoration: none;
+      span {
+        margin-right: .4rem;
+        text-decoration: none;
+      }
+    }
+    &__btn-icon {
+      text-decoration: none;
+      margin-left: .4rem;
+    }
+  }
   &__tech-header {
-    text-align: center;
+    text-align: flex-start;
+    margin-left: 1.9rem;
+    margin-top: 1.1rem;
   }
   &__techs {
-    list-style: none;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     align-items: center;
-    justify-items: center;
+    justify-items: flex-start;
     text-align: center;
     @include md {
       grid-template-columns: repeat(3, 1fr);
@@ -122,21 +151,6 @@
       padding: .2rem 1.4rem;
       border-radius: 5px;
       color: white;
-    }
-  }
-  &__btn-wrapper {
-    @include flex-property-row-center;
-    justify-content: flex-start;
-    button {
-      @include primary-btn;
-      @include flex-property-row-center;
-      margin: 0.6rem;
-      width: 9rem;
-      padding: 0.4rem;
-    }
-    &__btn-icon {
-      text-decoration: none;
-      margin-left: .4rem;
     }
   }
   &__prevNext {
