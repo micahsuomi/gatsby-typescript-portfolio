@@ -43,6 +43,9 @@
     align-items: center;
     flex-direction: column;
     padding: 0 2rem;
+    h2 {
+      color: $color-header;
+    }
     @include md {
       padding: 0 1rem;
     }

@@ -1,8 +1,8 @@
 /* eslint-disable react/display-name */
-import React from 'react'
+import React, { useState } from 'react'
 import { graphql, Link } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-import { FaChevronRight, FaChevronLeft } from 'react-icons/fa'
+import { FaChevronRight, FaChevronLeft, FaGithub } from 'react-icons/fa'
 import { RiArrowGoBackLine } from 'react-icons/ri'
 
 import Layout from '../../components/layout'
@@ -15,6 +15,11 @@ export const query = graphql`
       image {
         file {
           url
+        }
+      }
+      image {
+        fluid(maxWidth: 930) {
+          ...GatsbyContentfulFluid
         }
       }
       title
@@ -36,7 +41,21 @@ export const query = graphql`
 `
 
 const Portfolio = (props: any) => {
-  console.log(props.data)
+  const [isPrevShowing, setIsPrevShowing] = useState(false)
+  const [isNextShowing, setIsNextShowing] = useState(false)
+  const showPrevName = () => {
+    setIsPrevShowing(true)
+  }
+  const hidePrevName = () => {
+    setIsPrevShowing(false)
+  }
+  const showNextName = () => {
+    setIsNextShowing(true)
+  }
+  const hideNextName = () => {
+    setIsNextShowing(false)
+  }
+
   const options = {
     renderNode: {
       'embedded-asset-block': (node: any) => {
@@ -56,6 +75,7 @@ const Portfolio = (props: any) => {
     title: props.pageContext.next.title,
   }
   const {
+    image,
     title,
     subtitle,
     description,
@@ -66,79 +86,96 @@ const Portfolio = (props: any) => {
   return (
     <Layout>
       <div className="portfolio-template">
-        <div className="portfolio-item">
-          <div className="portfolio-item__exit">
-            <Link to="/portfolio">
-              <RiArrowGoBackLine className="exit-icon grow" />
-              <span>Back </span>
-            </Link>
+        <div className="portfolio-template__exit">
+          <Link to="/portfolio">
+            <RiArrowGoBackLine className="exit-icon grow" />
+            <span>Back </span>
+          </Link>
+        </div>
+        <div className="portfolio-item__prev grow">
+          <div>
+            {previousPortfolio && (
+              <Link to={previousPortfolio.url}>
+                <FaChevronLeft
+                  className="portfolio-item__prevNext grow"
+                  onMouseOver={showPrevName}
+                  onMouseOut={hidePrevName}
+                />
+              </Link>
+            )}
           </div>
+          {isPrevShowing && (
+            <div>
+              {previousPortfolio && (
+                <div className="portfolio-item__prevItemTitle">
+                  <Link to={previousPortfolio.url}>
+                    {props.pageContext.index}. {previousPortfolio.title}{' '}
+                  </Link>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+        <div className="portfolio-item animate-appear">
           <div className="portfolio-item__content">
             <div className="portfolio-item__portfolioDetail">
-              {documentToReactComponents(description.json, options)}
-            </div>
-            <div>
               <h3>{title}</h3>
               <h4>{subtitle}</h4>
-              <p className="portfolio-item__tech-header">Tech used:</p>
-              <ul className="portfolio-item__techs">
-                {' '}
-                {tech.map((t: any) => (
-                  <li key={t}>
-                    <p>{t}</p>
-                  </li>
-                ))}
-              </ul>
+              <img src={image.file.url} alt={title} />
               <div className="portfolio-item__btn-wrapper">
                 <a href={demoLink} target="blank">
-                  <button>Demo</button>
+                  <button>
+                    Demo
+                    <FaGithub className="portfolio-item__btn-icon" />
+                  </button>
                 </a>
                 <a href={githubLink} target="blank">
-                  <button>GitHub</button>
+                  <button>
+                    GitHub
+                    <FaGithub className="portfolio-item__btn-icon" />
+                  </button>
                 </a>
               </div>
             </div>
-          </div>
-          <div className="portfolio-item__prevNext-wrapper">
-            <div className="portfolio-item__prevNext grow">
-              <div>
-                {previousPortfolio && (
-                  <Link to={previousPortfolio.url}>
-                    <FaChevronLeft />
-                    <span className="portfolio-item__prevText">Previous</span>
-                  </Link>
-                )}
-              </div>
-              <div>
-                {previousPortfolio && (
-                  <div>
-                    <Link to={previousPortfolio.url}>
-                      {props.pageContext.index}. {previousPortfolio.title}{' '}
-                    </Link>
-                  </div>
-                )}
-              </div>
-            </div>
-            <div className="portfolio-item__prevNext grow">
-              <div>
-                {nextPortfolio && (
-                  <div>
-                    <Link to={nextPortfolio.url}>
-                      {props.pageContext.index + 2}. {nextPortfolio.title}{' '}
-                    </Link>
-                  </div>
-                )}
-              </div>
-              <div>
-                {nextPortfolio && (
-                  <Link to={nextPortfolio.url}>
-                    <span className="portfolio-item__nextText">Next</span>
-                    <FaChevronRight />
-                  </Link>
-                )}
-              </div>
+            <div className="portfolio-item__paragraph">
+              {documentToReactComponents(description.json)}
             </div>
           </div>
+          <div>
+            <p className="portfolio-item__tech-header">Tech used:</p>
+            <ul className="portfolio-item__techs">
+              {' '}
+              {tech.map((t: any) => (
+                <li key={t}>
+                  <p>{t}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="portfolio-item__next grow">
+        {isNextShowing && (
+          <div>
+            {nextPortfolio && (
+              <div className="portfolio-item__nextItemTitle">
+                <Link to={nextPortfolio.url}>
+                  {props.pageContext.index + 2}. {nextPortfolio.title}{' '}
+                </Link>
+              </div>
+            )}
+          </div>
+        )}
+        <div>
+          {nextPortfolio && (
+            <Link to={nextPortfolio.url}>
+              <FaChevronRight
+                className="portfolio-item__prevNext grow"
+                onMouseOver={showNextName}
+                onMouseOut={hideNextName}
+              />
+            </Link>
+          )}
         </div>
       </div>
     </Layout>
