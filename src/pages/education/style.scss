@@ -5,5 +5,11 @@
   &__wrapper {
     @include flex-property-column;
     padding: 2rem 2rem;
+    @include sm {
+      padding: 2rem .3rem;
+    }
+  }
+  @include sm {
+    padding: 5rem 0;
   }
 }

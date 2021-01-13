@@ -46,6 +46,9 @@
   @include md {
     padding: 2rem 2rem;
     width: 97vw;
+    @include sm {
+      padding: 2rem 0rem;
+    }
   }
   
   &__content {
@@ -64,9 +67,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    @include sm {
-      grid-row: 2/2;
-    }
+    
     img {
       width: 100%;
       @include shadow-trans;
