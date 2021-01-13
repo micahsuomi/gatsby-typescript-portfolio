@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'gatsby'
 
 import { HeaderProps } from '../../types'
+import logo from '../../images/icon-logo.png'
 
 import headerStyles from './styles.module.scss'
 import './styles.css'
@@ -48,6 +49,7 @@ const Header = ({ siteTitle }: HeaderProps) => {
     <header className={headerStyles.header}>
       <div className={headerStyles.title}>
         <Link to="/" className={headerStyles.titleLink}>
+          <img src={logo} alt="title" />
           {siteTitle.toUpperCase()}
         </Link>
       </div>

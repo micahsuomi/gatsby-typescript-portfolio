@@ -4,7 +4,11 @@ import { graphql, Link } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { FaChevronRight, FaChevronLeft, FaGithub } from 'react-icons/fa'
 import { RiArrowGoBackLine } from 'react-icons/ri'
-import { BsBoxArrowUpRight } from 'react-icons/bs'
+import {
+  BsChevronLeft,
+  BsChevronRight,
+  BsBoxArrowUpRight,
+} from 'react-icons/bs'
 
 import Layout from '../../components/layout'
 
@@ -37,6 +41,12 @@ export const query = graphql`
       tech
       demoLink
       githubLink
+    }
+    contentfulPortfolioFooter {
+      title
+      description {
+        json
+      }
     }
   }
 `
@@ -88,7 +98,7 @@ const Portfolio = (props: any) => {
           <div>
             {previousPortfolio && (
               <Link to={previousPortfolio.url}>
-                <FaChevronLeft
+                <BsChevronLeft
                   className="portfolio-item__prevNext grow"
                   onMouseOver={showPrevName}
                   onMouseOut={hidePrevName}
@@ -145,6 +155,14 @@ const Portfolio = (props: any) => {
             </ul>
           </div>
           <hr></hr>
+          <div className="portfolio-item__footer-text">
+            <h4>{props.data.contentfulPortfolioFooter.title}</h4>
+            <p>
+              {documentToReactComponents(
+                props.data.contentfulPortfolioFooter.description.json,
+              )}
+            </p>
+          </div>
         </div>
       </div>
       <div className="portfolio-item__next grow">
@@ -162,7 +180,7 @@ const Portfolio = (props: any) => {
         <div>
           {nextPortfolio && (
             <Link to={nextPortfolio.url}>
-              <FaChevronRight
+              <BsChevronRight
                 className="portfolio-item__prevNext grow"
                 onMouseOver={showNextName}
                 onMouseOut={hideNextName}

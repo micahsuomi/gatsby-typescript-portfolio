@@ -156,6 +156,15 @@
   &__techs li::before {
     color: red;
   }
+  &__footer-text {
+    @include flex-property-column;
+    p {
+      text-align: center;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
   &__prevNext {
     display: flex;
     justify-content: space-around;
