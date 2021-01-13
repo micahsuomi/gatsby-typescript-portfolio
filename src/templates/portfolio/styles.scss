@@ -9,10 +9,21 @@
   background-position: center;
   position: relative;
   z-index: 3;
-  min-height: 220vh;
+  min-height: 237vh;
   width: 100%;
   animation-name: appear;
   transition: all ease-in-out .2s;
+  margin-bottom: -7rem;
+  @include lg {
+    min-height: 114vh;
+  }
+  @include md {
+    min-height: 147vh;
+  }
+  @include sm {
+    min-height: 170vh;
+    margin-bottom: -10rem;
+  }
   &__exit {
     position: absolute;
     width: 90vw;
@@ -21,6 +32,9 @@
     align-items: center;
     top: 4%;
     z-index: 5;
+    @include lg {
+      top: 2%;
+    }
     a {
       text-decoration: none;
       color: rgb(233, 212, 212);
@@ -43,14 +57,15 @@
   position: absolute;
   z-index: 4;
   @include shadow-trans;
-  @include md {
-    padding: 2rem 2rem;
-    width: 97vw;
-    @include sm {
-      padding: 2rem 0rem;
-    }
+  @include lg {
+    padding: 0 2rem;
+    width: 77vw;
+    margin-top: 5rem;
   }
-  
+  @include sm {
+    padding: 2rem 0rem;
+    width: 97vw;
+  }
   &__content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -180,7 +195,7 @@
   &__prev,
   &__next {
     position: absolute;
-    top: 33%;
+    top: 31%;
     z-index: 3;
     display: flex;
     align-items: center;
@@ -191,10 +206,22 @@
   }
   &__prev {
     left: 3%;
+    @include lg {
+      top: 48.5%;
+    }
+    @include md {
+      top: 38.5%;
+    }
   }
   &__next {
     right: 3%;
-    top: 30.5%;
+    top: 31%;
+    @include lg {
+      top: 48.5%;
+    }
+    @include md {
+      top: 38.5%;
+    }
   }
   &__prevNext {
     font-size: 3.6em;

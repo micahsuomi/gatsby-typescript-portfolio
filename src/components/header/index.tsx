@@ -50,7 +50,7 @@ const Header = ({ siteTitle }: HeaderProps) => {
       <div className={headerStyles.title}>
         <Link to="/" className={headerStyles.titleLink}>
           <img src={logo} alt="title" />
-          {siteTitle.toUpperCase()}
+          <span>{siteTitle.toUpperCase()}</span>
         </Link>
       </div>
       <nav>
