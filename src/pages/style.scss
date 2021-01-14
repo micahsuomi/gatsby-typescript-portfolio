@@ -165,14 +165,14 @@
   &__portfolio-link--btn {
     font-size: $regular-text;
     // background: rgb(69, 20, 83);
-    background-color: rgb(255, 0, 140);
-    border: none;
+    background: transparent;
+    border: 2px solid rgb(255, 0, 140);
     padding: 0.7rem;
     width: 12rem;
     border-radius: 3px;
-    box-shadow: 0 0.5rem 2rem rgba(97, 86, 86, 0.6);
+    box-shadow: 0 0.2rem 2rem rgba(97, 86, 86, 0.6);
     text-transform: uppercase;
-    color: white;
+    color:  rgb(255, 0, 140);
     cursor: pointer;
     font-family: 'Montserrat';
     @include ssm {
@@ -184,6 +184,8 @@
     outline: none;
   }
   &__portfolio-link--btn:hover {
+    background-color:  rgb(255, 0, 140);
+    color: white;
     transform: translateY(-0.2rem);
     @include shadow-trans;
   }

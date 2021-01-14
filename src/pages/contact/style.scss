@@ -1,8 +1,14 @@
 @import '../../scss/main.scss';
 
 .contact {
-  padding: 3rem 7rem;
-  height: 128vh;
+  padding: 3rem 4rem;
+  height: 115vh;
+  padding-bottom: 13rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 7rem;
   @include flex-property-column;
   @include lg {
     padding: 20rem 2rem;
@@ -12,7 +18,7 @@
     padding: 9rem 2rem;
   }
   @include md {
-    height: 112vh;
+    height: 128vh;
     padding: 6rem 2rem;
   }
 
@@ -21,8 +27,9 @@
     grid-template-columns: repeat(2, 1fr);
     justify-items: stretch;
     align-items: stretch;
-    height: 85vh;
-    width: 70vw;
+    margin-top: 9rem;
+    width: 81vw;
+    height: 27rem;
     @include shadow-trans;
     @include lg {
       height: 44vh;
@@ -42,7 +49,7 @@
     background-color: $color-text;
     color: white;
     // width: 88%;
-    // height: 86%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,9 +67,14 @@
   &__info {
     list-style: none;
     align-self: flex-start;
+    margin-right: 1.45em;
+    li {
+      font-family: 'Raleway';
+    }
   }
   &__social-wrapper {
     list-style: none;
+    margin-right: 1.45em;
     @include flex-property-row-center;
     li a {
       color: white;
@@ -71,7 +83,7 @@
   }
   &__right {
     padding: 0;
-    height: 86%;
+    height: 100%;
     width: 99%;
   }
   .social-icon {

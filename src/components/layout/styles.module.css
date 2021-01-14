@@ -506,7 +506,7 @@ li > ol {
   margin-top: calc(1.45rem / 2);
 }
 li > ul {
-  margin-left: 1.45rem;
+  /* margin-left: 1.45rem; */
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
 }
