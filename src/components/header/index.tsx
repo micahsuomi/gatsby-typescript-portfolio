@@ -43,7 +43,6 @@ const Header = ({ siteTitle }: HeaderProps) => {
 
   const lineClassThree = 'line bottom'
   const lineClassThreeActive = 'line bottom active'
-
   const changeBackground = () => {
     if (window.scrollY >= 50 || window.innerWidth <= 800) {
       setScrolled(true)
@@ -54,10 +53,11 @@ const Header = ({ siteTitle }: HeaderProps) => {
   const toggle = () => {
     setState(!isClicked)
   }
+
   useEffect(() => {
     changeBackground()
+    window.addEventListener('scroll', changeBackground)
   }, [])
-  window.addEventListener('scroll', changeBackground)
 
   return (
     <header className={scrolled ? 'header active' : 'header'}>
