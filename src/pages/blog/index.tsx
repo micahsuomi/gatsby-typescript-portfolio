@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
@@ -9,16 +9,6 @@ import BlogItem from '../../components/blogItem'
 import './style.scss'
 
 const Blog = () => {
-  const [scrolled, setScrolled] = useState(false)
-  const changeBackground = () => {
-    console.log(window.scrollY)
-    if (window.scrollY >= 80 || window.innerWidth <= 400) {
-      setScrolled(true)
-    } else {
-      setScrolled(false)
-    }
-  }
-  window.addEventListener('scroll', changeBackground)
   const data = useStaticQuery(graphql`
     query {
       contentfulBlogHeader {
@@ -48,7 +38,7 @@ const Blog = () => {
   return (
     <Layout>
       <Head title="Blog" />
-      <div className={scrolled ? 'blog active' : 'blog'}>
+      <div className="blog">
         <h2>{data.contentfulBlogHeader.title}</h2>
         {documentToReactComponents(
           data.contentfulBlogHeader.description.json,

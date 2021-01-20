@@ -5,6 +5,7 @@ import { HeaderProps } from '../../types'
 import logo from '../../images/icon-logo.png'
 
 import headerStyles from './styles.module.scss'
+
 import './styles.css'
 
 const headerActive = {
