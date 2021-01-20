@@ -7,6 +7,8 @@
   align-items: center;
   justify-items: center;
   margin-top: .9rem;
+  background-color: white;
+  border-radius: 15px;
   @include shadow-trans;
   &__image {
     display: inline-block;
@@ -20,12 +22,12 @@
     }
     img {
       object-fit: cover;
-      width: 80%;
-      height: 80%;
+      width: 65%;
+      height: 65%;
       overflow: hidden;
       @include sm {
-        height: 100%;
-        width: 100%;
+        height: 80%;
+        width: 70%;
       }
     }
   }
@@ -37,6 +39,7 @@
     h3,
     h4 {
       text-align: center;
+      color: $color-text;
       @include sm {
         margin-top: 1rem;
       }
@@ -57,7 +60,8 @@
       }
       li {
         margin: 0.3rem;
-        font-size: $regular-text;
+        font-size: $small-text;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       }
     }
   }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'gatsby'
 
 import { HeaderProps } from '../../types'
@@ -8,10 +8,11 @@ import headerStyles from './styles.module.scss'
 import './styles.css'
 
 const headerActive = {
-  borderBottom: '3px solid #22225c',
+  borderBottom: '3px solid rgb(175 175 246)',
 }
+
 const borderToggleBarClicked = {
-  border: '1px solid white',
+  border: '1px solid black',
   borderRadius: '500px',
 }
 
@@ -19,18 +20,20 @@ const borderToggleBarUnclicked = {
   border: 'none',
 }
 
-const styleClicked = {
-  backgroundColor: 'white',
+const styleDark = {
+  background: 'black',
 }
 
-const styleUnclicked = {
-  backgroundColor: 'black',
+const styleLight = {
+  background: 'white',
 }
 
 const Header = ({ siteTitle }: HeaderProps) => {
+  const [scrolled, setScrolled] = useState(false)
   const [isClicked, setState] = useState(false)
-  const navList = 'nav-list'
-  const navListOpen = 'nav-list open'
+
+  const navLink = 'nav-link'
+  const navLinkScrolled = 'nav-link active'
 
   const lineClassOne = 'line top'
   const lineClassOneActive = 'line top active'
@@ -41,12 +44,23 @@ const Header = ({ siteTitle }: HeaderProps) => {
   const lineClassThree = 'line bottom'
   const lineClassThreeActive = 'line bottom active'
 
+  const changeBackground = () => {
+    if (window.scrollY >= 50 || window.innerWidth <= 800) {
+      setScrolled(true)
+    } else {
+      setScrolled(false)
+    }
+  }
   const toggle = () => {
     setState(!isClicked)
   }
+  useEffect(() => {
+    changeBackground()
+  }, [])
+  window.addEventListener('scroll', changeBackground)
 
   return (
-    <header className={headerStyles.header}>
+    <header className={scrolled ? 'header active' : 'header'}>
       <div className={headerStyles.title}>
         <Link to="/" className={headerStyles.titleLink}>
           <img src={logo} alt="title" />
@@ -64,21 +78,22 @@ const Header = ({ siteTitle }: HeaderProps) => {
           >
             <span
               className={isClicked ? lineClassOneActive : lineClassOne}
-              style={isClicked ? styleClicked : styleUnclicked}
+              style={scrolled ? styleDark : styleLight}
             ></span>
             <span
               className={isClicked ? lineClassTwoActive : lineClassTwo}
+              style={scrolled ? styleDark : styleLight}
             ></span>
             <span
               className={isClicked ? lineClassThreeActive : lineClassThree}
-              style={isClicked ? styleClicked : styleUnclicked}
+              style={scrolled ? styleDark : styleLight}
             ></span>
           </div>
         </div>
-        <ul className={isClicked ? navListOpen : navList}>
+        <ul className={isClicked ? 'nav-list open' : 'nav-list'}>
           <li className={headerStyles.navItem}>
             <Link
-              className={headerStyles.navLink}
+              className={scrolled ? navLinkScrolled : navLink}
               activeStyle={headerActive}
               to="/"
             >
@@ -87,16 +102,7 @@ const Header = ({ siteTitle }: HeaderProps) => {
           </li>
           <li className={headerStyles.navItem}>
             <Link
-              className={headerStyles.navLink}
-              activeStyle={headerActive}
-              to="/about"
-            >
-              About
-            </Link>
-          </li>
-          <li className={headerStyles.navItem}>
-            <Link
-              className={headerStyles.navLink}
+              className={scrolled ? navLinkScrolled : navLink}
               activeStyle={headerActive}
               partiallyActive={true}
               to="/portfolio"
@@ -106,7 +112,7 @@ const Header = ({ siteTitle }: HeaderProps) => {
           </li>
           <li className={headerStyles.navItem}>
             <Link
-              className={headerStyles.navLink}
+              className={scrolled ? navLinkScrolled : navLink}
               activeStyle={headerActive}
               partiallyActive={true}
               to="/education"
@@ -116,7 +122,7 @@ const Header = ({ siteTitle }: HeaderProps) => {
           </li>
           <li className={headerStyles.navItem}>
             <Link
-              className={headerStyles.navLink}
+              className={scrolled ? navLinkScrolled : navLink}
               activeStyle={headerActive}
               partiallyActive={true}
               to="/blog"
@@ -126,7 +132,7 @@ const Header = ({ siteTitle }: HeaderProps) => {
           </li>
           <li className={headerStyles.navItem}>
             <Link
-              className={headerStyles.navLink}
+              className={scrolled ? navLinkScrolled : navLink}
               activeStyle={headerActive}
               partiallyActive={true}
               to="/contact"

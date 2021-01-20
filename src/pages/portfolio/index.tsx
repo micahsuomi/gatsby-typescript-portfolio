@@ -40,7 +40,9 @@ const Portfolio = () => {
       <Head title="Portfolio" />
       <div className="portfolio">
         <h2>{title}</h2>
-        <p>{documentToReactComponents(description.json)}</p>
+        <p className="portfolio__description">
+          {documentToReactComponents(description.json)}
+        </p>
         <div className="portfolio__wrapper">
           {data.allContentfulPortfolio.edges.map((edge: any) => {
             const { slug, title, subtitle, image, demoLink } = edge.node

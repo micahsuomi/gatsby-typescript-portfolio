@@ -6,11 +6,13 @@
   background-color: $color-light-grey;
   background-position: center;
   background-size: cover;
-  margin-top: 2rem;
-  padding: 3rem 5rem;
+  // margin-top: 2rem;
+  padding: 6rem 5rem;
   position: relative;
-  -webkit-clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
-  clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
+  // background-color: $color-background;
+  color: $color-header;
+  // -webkit-clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
+  // clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
   @include md {
     padding: 2rem 1rem;
   }
@@ -27,6 +29,8 @@
     text-transform: uppercase;
     opacity: 0.8;
     color: $primary-color;
+    // color: white;
+    opacity: 0.8;
   }
 
   &__wrapper {
@@ -41,5 +45,21 @@
     @include sm {
       grid-template-columns: 1fr;
     }
+  }
+}
+
+.blog.active {
+  background-color: white;
+  animation-name: appear;
+  transition: background-color 1s linear;
+
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+   
   }
 }

@@ -6,6 +6,8 @@
   justify-items: center;
   align-items: stretch;
   width: 80vw;
+  background-color:$color-light-grey;
+  color: $color-text;
   @include shadow-trans;
   @include sm {
     grid-template-columns: 1fr;
@@ -36,15 +38,20 @@
   &__content {
     @include flex-property-column;
     padding: 1rem 2rem;
+    a {
+      text-decoration: none;
+    }
   }
   &__tags-wrapper {
     @include flex-property-row-center;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-top: 1rem;
     p {
       padding: 0.2rem 0.4rem;
       background-color: lightgrey;
       border-radius: 3px;
+      font-family: 'Raleway';
       @include shadow-trans;
       margin: 0.3rem;
       font-size: 12px;
@@ -55,5 +62,12 @@
     width: 7rem;
     padding: 0.5rem;
     margin-top: 1rem;
+    @include flex-property-row-center;
+    width: 9rem;
+      padding: 0.4rem;
+  }
+  .read-icon {
+    color: white;
+    margin-left: 1rem;
   }
 }

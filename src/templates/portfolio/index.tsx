@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { graphql, Link } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-import { FaChevronRight, FaChevronLeft, FaGithub } from 'react-icons/fa'
+import { FaGithub } from 'react-icons/fa'
 import { RiArrowGoBackLine } from 'react-icons/ri'
 import {
   BsChevronLeft,
@@ -118,7 +118,7 @@ const Portfolio = (props: any) => {
             </div>
           )}
         </div>
-        <div className="portfolio-item animate-appear">
+        <div className="portfolio-item appear">
           <div className="portfolio-item__content">
             <div className="portfolio-item__portfolioDetail">
               <img src={image.file.url} alt={title} />

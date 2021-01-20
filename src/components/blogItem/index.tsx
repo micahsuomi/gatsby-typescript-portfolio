@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
+import { BsBoxArrowUpRight } from 'react-icons/bs'
 
 import { BlogItemProps } from '../../types'
 
@@ -30,7 +31,10 @@ const PortfolioItem = ({ slug, title, tags, image, date }: BlogItemProps) => {
           })}
         </div>
         <Link to={`/blog/${slug}`}>
-          <button className="grow">Read</button>
+          <button className="grow">
+            <span>Read</span>
+            <BsBoxArrowUpRight className="read-icon" />
+          </button>
         </Link>
       </div>
     </div>

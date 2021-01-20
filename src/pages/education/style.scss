@@ -2,6 +2,8 @@
 
 .education {
   padding: 7rem 4rem;
+  background-color: $color-background;
+  background-color: $color-light-grey;
   &__wrapper {
     @include flex-property-column;
     padding: 2rem 2rem;

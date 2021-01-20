@@ -16,7 +16,6 @@
   grid-template-rows: repeat(5, 1fr);
   grid-template-columns: repeat(10, 10vw);
   position: relative;
-  margin-top: 3rem;
 
   .image-1 {
     grid-row: 1 / 3;
@@ -66,7 +65,7 @@
     background-size: cover;
     background-position: center;
     @include md {
-      grid-column: 1 / 3;
+      grid-column: 1 / 5;
     }
     @include sm {
       grid-column: 1 / 5;
@@ -104,6 +103,9 @@
       url('../imgs/profile3.png');
     background-size: cover;
     background-position: center;
+    @include md {
+      grid-column: 5 / 8;
+    }
     @include sm {
       grid-column: 1 / 6;
     }
@@ -127,7 +129,7 @@
     align-items: center;
     flex-direction: column;
     position: absolute;
-    top: 30%;
+    top: 35%;
     left: 30%;
     z-index: 1;
     @include md {
@@ -293,6 +295,248 @@
   .image-8 {
     grid-row: 4 / -1;
     grid-column: 7 / 9;
+  }
+}
+
+
+.about {
+  @include flex-property-column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: $color-background;
+  color: white;
+  @include md {
+    padding: 6rem 0;
+  }
+  @include sm {
+    grid-template-columns: 1fr;
+    padding: 5rem 0;
+  }
+  &__img-container {
+    @include md {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    img {
+      width: 90%;
+      align-self: center;
+      @include md {
+        width: 80%;
+        height: 28%;
+      }
+    }
+  }
+  @include md {
+    .gatsby-image-wrapper {
+      width: 20rem;
+      height: 20rem;
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 2rem;
+    h2 {
+      color: $color-header;
+      color: $color-light-grey;
+    }
+    @include md {
+      padding: 0 1rem;
+    }
+    @include sm {
+      margin-top: 1rem;
+    }
+
+    p {
+      font-size: $regular-text;
+    }
+  }
+
+  &__iconswrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2em;
+    text-align: center;
+    align-items: flex-start;
+    justify-items: center;
+    padding: 4rem 3rem;
+    background-color: white;
+    @include md {
+      grid-gap: 1em;
+      padding: 2rem 1rem;
+    }
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__skills-wrapper {
+    @include flex-property-column;
+    padding: 0 3rem;
+    @include sm {
+      padding: 2rem 1.4rem;
+    }
+    h3 {
+      text-align: center;
+      margin-top: 2rem;
+      @include sm {
+        margin-top: 0;
+      }
+    }
+  }
+  &__skills-frontend-container {
+    background-color: #4c4444;
+    color: white;
+    width: 100vw;
+    padding: 2rem 3rem;
+  }
+  &__skills-backend-container {
+    background-color:#5a6171;
+    color: white;
+    width: 50vw;
+    padding: 2rem 3rem;
+    @include sm {
+      width: 100vw;
+    }
+  }
+  &__skills-database-container {
+    background-color: rgb(47, 62, 68);
+    color: white;
+    width: 50vw;
+    padding: 2rem 3rem;
+    @include sm {
+      width: 100vw;
+    }
+  }
+  &__skills-devops-container {
+    background-color: #443a46;
+    color: white;
+    width: 100vw;
+    padding: 2rem 3rem;
+    @include sm {
+      padding: 2rem 2rem;
+      height: 53vh;
+      clip-path: polygon(100% 0, 100% 100%, 49% 93%, 0 100%, 0 0);
+    }
+  }
+
+  &__skill-image--frontend,
+  &__skill-list--frontend {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    align-items: center;
+    justify-items: center;
+    grid-gap: 1em;
+    @include sm {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    img {
+      width: 50%;
+      color: white;
+      @include sm {
+        width: 40%;
+      }
+    }
+  }
+  &__skill-list--frontend {
+    @include sm {
+      display: none;
+    }
+  }
+  &__skills-nested {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__skill-image--backend,
+  &__skill-list--backend {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    grid-gap: 1em;
+    img {
+      width: 23%;
+      height: 3.2rem;
+      @include sm {
+        width: 35%;
+      }
+    }
+  }
+  &__skill-list--backend {
+    @include sm {
+      display: none;
+    }
+  }
+  &__skill-image--databases,
+  &__skill-list--databases {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    grid-gap: 1em;
+    margin-top: 1rem;
+    img {
+      width: 32%;
+      height: 3.2rem;
+      @include sm {
+        width: 48%;
+        height: 3rem;
+      }
+    }
+  }
+  &__skill-list--databases {
+    @include sm {
+      display: none;
+    }
+  }
+  &__skill-image--devops,
+  &__skill-list--devops {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: center;
+    justify-items: center;
+    grid-gap: 1em;
+    width: 90.3vw;
+    margin-top: 1rem;
+    @include sm {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 1rem 0;
+    }
+    img {
+      width: 32%;
+      @include sm {
+        width: 27%;
+      }
+    }
+  }
+  &__skill-list--devops {
+    margin-bottom: 3rem;
+    @include sm {
+      display: none;
+    }
+  }
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  grid-gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  @include md {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 

@@ -4,6 +4,7 @@ $color-text: rgb(63, 52, 52); // for all regular text
 $color-white: #ffffff;
 $color-light-grey: #fafafa; // mostly used for section background,
 $color-grey: #888c81; // for grey text
+$color-background: #2A2A2A;
 $primary-color: linear-gradient(
   120deg,
   rgb(56, 52, 52) 0%,
@@ -16,6 +17,7 @@ $section-title: 30px;
 $sub-title: 22px;
 $card-title: 22px;
 $regular-text: 16px;
+$small-text: 14px;
 
 // border
 $standard-border: 1px solid $color-white;

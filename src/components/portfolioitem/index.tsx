@@ -32,7 +32,7 @@ const PortfolioItem = ({
       )}
       <div className="portfolio-card__content hide">
         <h4>{title}</h4>
-        <p>{subtitle}</p>
+        <p className="porfolio-card__subtitle">{subtitle}</p>
         <a href={demoLink} target="blank">
           <button className="grow">Demo</button>
         </a>

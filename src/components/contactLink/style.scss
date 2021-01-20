@@ -1,0 +1,36 @@
+@import '../../scss/main.scss';
+
+.contact-link {
+    @include flex-property-column;
+    background-color: $color-background;
+    height: 22rem;
+    clip-path: polygon(100% 0, 100% 100%, 50% 95%, 0 100%, 0 0);
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 50% 95%, 0 100%, 0 0);
+    h2 {
+        color: $color-header;
+        color: $color-white;
+    }
+    a {
+        text-decoration: none;
+    }
+    &__btn {
+        @include flex-property-column;
+        cursor: pointer;
+        background-color: transparent;
+        color: rgb(255, 0, 140);
+        border: 2px solid rgb(255, 0, 140);
+        background-color: none;
+        padding: 0.3rem;
+        text-transform: uppercase;
+        border-radius: 25px;
+        font-family: 'Montserrat';
+        width: 18rem;
+        &:hover {
+            background-color: rgb(255, 0, 140);
+            color: white;
+          }
+        :active {
+            outline: none;
+          } 
+    }
+}

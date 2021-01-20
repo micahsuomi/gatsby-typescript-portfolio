@@ -4,9 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Img from 'gatsby-image'
 
-import Layout from '../../components/layout'
-import Head from '../../components/head'
-import IconCard from '../../components/iconcard'
+import IconCard from '../iconcard'
 
 import './style.scss'
 
@@ -104,13 +102,12 @@ const AboutPage = () => {
   }
 
   return (
-    <Layout>
-      <Head title="About" />
+    <>
       <div className="about">
         <div
           className="about__img-container"
           data-sal="zoom-in"
-          data-sal-delay="300"
+          data-sal-delay="100"
           data-sal-easing="ease"
         >
           <Img
@@ -122,7 +119,7 @@ const AboutPage = () => {
         <div
           className="about__content"
           data-sal="zoom-in"
-          data-sal-delay="300"
+          data-sal-delay="100"
           data-sal-easing="ease"
         >
           <h2>{data.contentfulAbout.title}</h2>
@@ -201,7 +198,7 @@ const AboutPage = () => {
           <div
             className="about__skills-database-container"
             data-sal="flip-left"
-            data-sal-delay="100"
+            data-sal-delay="300"
             data-sal-easing="ease"
           >
             {data.allContentfulDatabaseSkills.edges.map((edge: any) => {
@@ -227,7 +224,7 @@ const AboutPage = () => {
         <div
           className="about__skills-devops-container"
           data-sal="flip-right"
-          data-sal-delay="100"
+          data-sal-delay="300"
           data-sal-easing="ease"
         >
           {data.allContentfulDevOpsDeploymentSkills.edges.map((edge: any) => {
@@ -250,7 +247,7 @@ const AboutPage = () => {
           })}
         </div>
       </div>
-    </Layout>
+    </>
   )
 }
 
