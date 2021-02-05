@@ -2,7 +2,6 @@
 
 .contact {
   padding: 0rem 4rem;
-  height: 132vh;
   padding-bottom: 13rem;
   display: flex;
   flex-direction: column;
@@ -11,15 +10,10 @@
   background-color: $color-light-grey;
   @include flex-property-column;
   @include lg {
-    padding: 20rem 2rem;
-    height: 96vh;
-  }
-  @include lg {
-    padding: 9rem 2rem;
+    padding: 3rem 2rem;
   }
   @include md {
-    height: 128vh;
-    padding: 6rem 2rem;
+    padding: 6rem 1rem;
   }
 
   &__container {
@@ -28,15 +22,10 @@
     justify-items: stretch;
     align-items: stretch;
     margin-top: 9rem;
-    width: 81vw;
-    height: 27rem;
+    // width: 81vw;
     @include shadow-trans;
     @include lg {
-      height: 44vh;
-    }
-    @include md {
       grid-template-columns: 1fr;
-      height: 90vh;
     }
     @include sm {
       margin: -1rem;
@@ -45,11 +34,10 @@
   }
   &__left {
     line-height: 1.8;
-    padding: 1rem;
+    padding: 2rem 1rem;
     background-color: $color-text;
     color: white;
     // width: 88%;
-    height: 89%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -83,8 +71,6 @@
   }
   &__right {
     padding: 0;
-    height: 89%;
-    width: 99%;
   }
   .social-icon {
     color: white;

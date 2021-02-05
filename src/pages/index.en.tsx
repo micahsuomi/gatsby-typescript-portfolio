@@ -137,7 +137,6 @@ const IndexPage = () => {
           </div>
         </div>
         <div className="front-gallery-image image-6"></div>
-        {/* <div class="front-gallery-image image-7" data-aos="flip-up"></div> */}
         <div className="front-gallery-image image-8"></div>
         <div className="front-gallery-image image-9"></div>
       </div>

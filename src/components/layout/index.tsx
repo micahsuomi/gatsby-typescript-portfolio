@@ -36,7 +36,7 @@ const Layout: React.FC = ({ children }) => {
       <div
         style={{
           margin: `0 auto`,
-          maxWidth: 1910,
+          maxWidth: 5000,
           // padding: `0 1.0875rem 1.45rem`,
         }}
       >
