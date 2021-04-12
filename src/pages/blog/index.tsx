@@ -34,7 +34,6 @@ const Blog = () => {
       }
     }
   `)
-  console.log(data)
   return (
     <Layout>
       <Head title="Blog" />
