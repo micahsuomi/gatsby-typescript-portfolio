@@ -1,3 +1,95 @@
+# Gatsby/TypeScript Portfolio Website
+
+![Main](./public/readme-imgs/portfolio-main.JPG)
+
+My porfolio website is the main collection that showcases my skills as full-stack developer. It displays my main projects and skills, a section about myself, my tech stack, my skills,education, a blog and a contact section.   
+
+# Table of contents:
+
+- [Tech Stack Used](#tech-stack-used)
+- [Home](#home)
+- [Portfolio](#portfolio)
+- [Education](#education)
+- [Blog](#blog)
+- [Contact](#contact)
+- [Dynamic Data](#dynamic-data)
+- [CMS](#cms)
+- [Deployment](#deployment)
+
+# Tech Stack Used
+- TypeScript
+- Gatsby Js
+- React Js
+- GraphQL
+- Contentful
+- StoryBook
+- Gatsby Plugins
+- Netlify Form
+- Sass
+
+## Home
+
+The home page displays a section of most pages, like market prices, exchanges, wallets and news. The hero section has a dark theme switched with Context API.
+
+![Home Page](./public/readme-imgs/home-page.png)
+![Home Page](./public/readme-imgs/menu.JPG)
+
+## Market Prices
+
+In this page users can view market prices and price changes for the top 100 cryptocurrencies based on the CryptoCompare API. The page displays the top 5 gainers and top 5 losers updated in real time based on percentage change per day. The market prices table has a table head where the user can sort crypto based on price, percentage change, market cap and circulating supply. Each crypto displayed has an add to watchlist button to allow the user to add selected currencies to a watchlist. By clicking on each coin, users can view more details for each cryptocurrency.
+
+![Market Prices](./public/readme-imgs/market-prices.png)
+![Market Prices](./public/readme-imgs/coin-info.JPG)
+
+## Historical Data
+
+Historical data shows daily pairs and daily exchange volume data for currencies based on user inputs. The charts and tables are based on updated data from the CryptoCompare API.
+
+![Historical Data](./public/readme-imgs/historical-data.png)
+
+## Exchanges
+
+This page displays a list of available exchanges that users can sort by name, volume, country, grade, gradepoints and rating. Grades vary from A to E and grade points from 0 to 100. By clicking on View Details, users can view more detailed data for each exchange.
+
+![Exchanges](./public/readme-imgs/exchanges.JPG)
+
+## Wallets
+
+Here are displayed around 250 wallets with data collected from the wallet’s API. Users can view data per wallet such as ease of use, platforms for which the wallet is available, coins, security and anonymity.
+
+![Wallets](./public/readme-imgs/wallets.png)
+![Wallets](./public/readme-imgs/view-wallet.JPG)
+
+## News
+
+News for cryptocurrencies are another feature brought by the CryptoCompare APIs. This page displays 50 news items divided in 5 pages and updated in real time from the API. Each news article, when clicked, redirects to its original publisher, as a way to generate more clicks for that particular crypto website.
+
+![News](./public/readme-imgs/news.png)
+
+## Watchlist
+
+In this watchlist cart are displayed all the cryptocurrencies added to the watchlist, which the user can remove. If there are no currencies on the watchlist, this page is not clickable.
+![Watchlist](./public/readme-imgs/watchlist.png)
+
+## Currency Converter
+
+With the currency converter, users can convert a selected amount of USDT into crypto and vice versa. After converting into currency, the conversion can be saved on a table displayed on the right, that the user can always access or from which the saved conversion can be later deleted.
+
+![Currency Converter](./public/readme-imgs/currency-converter.png)
+
+## Theme Switch
+
+The whole application uses a theme switch functionality created with Context API. The app theme can be switched from light mode to dark mode.
+
+![Theme Switch](./public/readme-imgs/dark-mode.png)
+
+## Deployment
+
+The app is deployed on Netlify and the demo can be found at the following link: https://crypto-lite-tracker.netlify.app/
+
+
+
+
 [![Node Version](https://img.shields.io/badge/Node->=10.16.0-339933.svg?style=flat&logo=Node.js)]()
 [![React Version](https://img.shields.io/badge/React-16.12.0-61DAFB.svg?style=flat&logo=React)]()
 [![Gatsby Version](https://img.shields.io/badge/Gatsby-2.19.17-663399.svg?style=flat&logo=Gatsby)]()
