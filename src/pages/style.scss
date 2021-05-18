@@ -178,7 +178,7 @@
     border-radius: 3px;
     box-shadow: 0 0.2rem 2rem rgba(97, 86, 86, 0.6);
     text-transform: uppercase;
-    color:  rgb(255, 0, 140);
+    color: rgb(255, 0, 140);
     cursor: pointer;
     font-family: 'Montserrat';
     @include ssm {
@@ -190,12 +190,39 @@
     outline: none;
   }
   &__portfolio-link--btn:hover {
-    background-color:  rgb(255, 0, 140);
+    background-color: rgb(255, 0, 140);
     color: white;
     transform: translateY(-0.2rem);
     @include shadow-trans;
   }
+  &__wrapper-arrow {
+    color: white;
+    margin-top: 1.3rem;
+    font-size: 2.1em;
+    opacity: 0.9;
+    -webkit-animation: moveDown 1s infinite alternate;
+    animation: moveDown 1s infinite alternate;
+  }
+
+  @-webkit-keyframes moveDown {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes moveDown {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
 }
+
 .front-gallery-image {
   object-fit: cover;
   display: block;
@@ -212,6 +239,7 @@
 .grow2:hover {
   transform: scale(1.1);
 }
+
 @keyframes showHide {
   from {
     opacity: 0.4;
@@ -300,7 +328,6 @@
     grid-column: 7 / 9;
   }
 }
-
 
 .about {
   @include flex-property-column;
@@ -400,7 +427,7 @@
     padding: 2rem 3rem;
   }
   &__skills-backend-container {
-    background-color:#5a6171;
+    background-color: #5a6171;
     color: white;
     width: 50vw;
     padding: 2rem 3rem;
