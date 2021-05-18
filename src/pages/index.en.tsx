@@ -4,6 +4,7 @@ import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Img from 'gatsby-image'
+import { BiCaretDown } from 'react-icons/bi'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -134,6 +135,7 @@ const IndexPage = () => {
                 </button>
               </Link>
             </div>
+            <BiCaretDown className="frontpage__wrapper-arrow" />
           </div>
         </div>
         <div className="front-gallery-image image-6"></div>
