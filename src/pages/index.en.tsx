@@ -120,12 +120,7 @@ const IndexPage = () => {
         <div className="front-gallery-image image-3"></div>
         <div className="front-gallery-image image-4"></div>
         <div>
-          <div
-            className="frontpage__wrapper"
-            data-sal="zoom-in"
-            data-sal-delay="300"
-            data-sal-easing="ease"
-          >
+          <div className="frontpage__wrapper">
             <h1>{title}</h1>
             <h2>{subtitle}</h2>
             <div className="frontpage__portfolio">

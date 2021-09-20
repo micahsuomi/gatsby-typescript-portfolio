@@ -52,9 +52,9 @@
     grid-row: 1 / 4;
     grid-column: 6 / 11;
     background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)),
-      url('../imgs/profile-int.jpg');
+      url('../imgs/profile-front.jpg');
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
   }
 
   .image-4 {
@@ -100,7 +100,7 @@
     grid-column: 7 / 8;
     // background-image: linear-gradient(var(--background-hero)), url("../imgs/app-9.jpg");
     background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)),
-      url('../imgs/profile3.png');
+      url('../imgs/profile-side.jpg');
     background-size: cover;
     background-position: center;
     @include md {
@@ -129,21 +129,13 @@
     align-items: center;
     flex-direction: column;
     position: absolute;
-    top: 35%;
-    left: 33%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1;
-    @include xl {
-      top: 37%;
-      left: 32%;
-    }
     @include md {
-      top: 40%;
-      left: 19%;
+      width: 100%;
     }
-    @include sm {
-      left: 8%;
-    }
-
     h1,
     h2 {
       font-weight: 500;
@@ -212,7 +204,7 @@
       transform: translateY(-10px);
     }
   }
-  
+
   @keyframes moveDown {
     0% {
       transform: translateY(0);
