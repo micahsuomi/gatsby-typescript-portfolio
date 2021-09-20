@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React, { useState } from 'react'
 import { navigate } from 'gatsby-link'
-import { IoIosSend } from "react-icons/io";
+import { IoIosSend } from 'react-icons/io'
 
 import contactStyles from './styles.module.scss'
 
@@ -89,7 +89,7 @@ const ContactForm = () => {
       <p>
         <button type="submit" className={contactStyles.submitBtn}>
           <span>Send</span>
-          <IoIosSend className="send-icon"/>
+          <IoIosSend className="send-icon" />
         </button>
       </p>
     </form>

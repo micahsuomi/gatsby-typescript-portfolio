@@ -133,9 +133,9 @@ const IndexPage = () => {
             <BiCaretDown className="frontpage__wrapper-arrow" />
           </div>
         </div>
+        <div className="front-gallery-image image-5"></div>
         <div className="front-gallery-image image-6"></div>
-        <div className="front-gallery-image image-8"></div>
-        <div className="front-gallery-image image-9"></div>
+        <div className="front-gallery-image image-7"></div>
       </div>
       <div className="about">
         <div

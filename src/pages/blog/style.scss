@@ -52,7 +52,6 @@
   background-color: white;
   animation-name: appear;
   transition: background-color 1s linear;
-
 }
 @keyframes appear {
   from {
@@ -60,6 +59,5 @@
   }
   to {
     opacity: 1;
-   
   }
 }

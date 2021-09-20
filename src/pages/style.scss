@@ -72,7 +72,7 @@
     }
   }
 
-  .image-6 {
+  .image-5 {
     grid-row: 3 / 6;
     grid-column: 4 / 7;
     // background-image: linear-gradient(var(--background-hero)), url("../imgs/app-3-big.jpg");
@@ -85,17 +85,7 @@
     }
   }
 
-  .image-7 {
-    grid-row: 5 / 6;
-    grid-column: 4 / 7;
-    // background-image: linear-gradient(var(--background-hero)), url("../imgs/app-7.jpg");
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)),
-      url('../imgs/profile3.png');
-    background-size: cover;
-    background-position: center;
-  }
-
-  .image-8 {
+  .image-6 {
     grid-row: 3 / -1;
     grid-column: 7 / 8;
     // background-image: linear-gradient(var(--background-hero)), url("../imgs/app-9.jpg");
@@ -111,7 +101,7 @@
     }
   }
 
-  .image-9 {
+  .image-7 {
     grid-row: 4 / -1;
     grid-column: 8 / -1;
     background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(34, 33, 33, 0.8)),
@@ -312,10 +302,10 @@
     flex-direction: column;
   }
 
-  .image-6 {
+  .image-5 {
     opacity: 0;
   }
-  .image-8 {
+  .image-6 {
     grid-row: 4 / -1;
     grid-column: 7 / 9;
   }

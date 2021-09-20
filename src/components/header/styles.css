@@ -1,4 +1,3 @@
-
 .header {
   align-self: center;
   width: 100vw;
@@ -18,11 +17,11 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(24, 22, 22, 0.8)); */
   background-color: white;
   /* background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); */
-  opacity: .99;
+  opacity: 0.99;
   box-shadow: 0px 3px 10px #00000033;
   animation-name: appear;
   animation-timing-function: ease-out;
-  transition: background-color .2s linear;
+  transition: background-color 0.2s linear;
 }
 
 .nav-list {
@@ -34,7 +33,7 @@
 }
 
 .nav-link {
-  color:rgb(187, 164, 164);
+  color: rgb(187, 164, 164);
   font-size: 15px;
   height: 3rem;
   font-family: 'Montserrat', sans-serif;
@@ -65,15 +64,14 @@
     transform: translate(0);
   }
 }
-  @keyframes appear {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-
-    }
+@keyframes appear {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
 @media screen and (max-width: 850px) {
   .nav-list {
     -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
@@ -114,7 +112,6 @@
     top: 31%;
     width: 53%;
     background: white;
-
   }
 
   .middle {
@@ -123,7 +120,6 @@
     width: 35%;
     margin-left: 4px;
     background: white;
-
   }
 
   .bottom {
@@ -132,7 +128,6 @@
     width: 23%;
     margin-left: 7px;
     background: white;
-
   }
 
   .top.active {

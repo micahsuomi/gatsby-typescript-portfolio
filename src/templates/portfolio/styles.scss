@@ -12,7 +12,7 @@
   min-height: 237vh;
   width: 100%;
   animation-name: appear;
-  transition: all ease-in-out .2s;
+  transition: all ease-in-out 0.2s;
   margin-bottom: -7rem;
   @include lg {
     min-height: 114vh;
@@ -50,7 +50,7 @@
 }
 .portfolio-item {
   width: 57vw;
-  top: .5%;
+  top: 0.5%;
   background-color: $color-light-grey;
   // border: 1px solid rgba(211, 211, 211, 0.5);
   color: #8a8a8a;
@@ -82,14 +82,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
     img {
       width: 100%;
       @include shadow-trans;
     }
-    
+
     p {
-      margin-top: .6rem;
+      margin-top: 0.6rem;
     }
   }
   &__paragraph {
@@ -111,7 +111,7 @@
     margin-top: 2rem;
   }
   &__subtitle {
-    margin-top: -.7rem;
+    margin-top: -0.7rem;
     text-transform: uppercase;
   }
   hr {
@@ -139,13 +139,13 @@
       padding: 0.4rem;
       text-decoration: none;
       span {
-        margin-right: .4rem;
+        margin-right: 0.4rem;
         text-decoration: none;
       }
     }
     &__btn-icon {
       text-decoration: none;
-      margin-left: .4rem;
+      margin-left: 0.4rem;
     }
   }
   &__tech-header {
@@ -158,13 +158,13 @@
     align-items: center;
     justify-items: flex-start;
     text-align: center;
-    margin-left: .8rem;
+    margin-left: 0.8rem;
     list-style-type: disc;
     p {
       font-size: 18.5px;
       // background-color: rgb(194, 204, 207);
-      margin-top: .3rem;
-      padding: .2rem 1.2rem;
+      margin-top: 0.3rem;
+      padding: 0.2rem 1.2rem;
       border-radius: 5px;
       color: $color-text;
     }
@@ -234,7 +234,6 @@
     a {
       text-decoration: none;
       font-family: 'Montserrat';
-
     }
   }
   &__prevItemTitle {
@@ -242,60 +241,58 @@
     top: 28%;
     width: 8rem;
     animation-name: moveInLeft;
-    animation-duration: .4s;
+    animation-duration: 0.4s;
     animation-timing-function: ease-out;
   }
   &__nextItemTitle {
     right: 10%;
     top: 28%;
     animation-name: moveInRight;
-    animation-duration: .4s;
+    animation-duration: 0.4s;
     animation-timing-function: ease-out;
   }
-  
- 
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(100px);
-  }
 
-  80% {
-    transform: translateX(10px);
-  }
+  @keyframes moveInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
 
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
+    80% {
+      transform: translateX(10px);
+    }
 
-  80% {
-    transform: translateX(10px);
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
   }
+  @keyframes moveInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
 
-  100% {
-    opacity: 1;
-    transform: translate(0);
+    80% {
+      transform: translateX(10px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
   }
-}
   @keyframes appear {
     from {
       opacity: 0;
     }
     to {
       opacity: 1;
-     
     }
   }
 }
 .animate-appear {
-  animation: createBox .25s;
+  animation: createBox 0.25s;
 }
 @keyframes createBox {
   from {

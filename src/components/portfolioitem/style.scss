@@ -45,14 +45,17 @@
     border-radius: 10px;
     width: 100%;
     height: 100%;
-    overflow:hidden;
+    overflow: hidden;
     -webkit-transition: all 0.2s linear;
     -moz-transition: all 0.2s linear;
     -o-transition: all 0.2s linear;
     transition: all 0.2s linear;
     @include flex-property-column;
     color: black;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(92, 61, 61, 0.8));
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.9),
+      rgba(92, 61, 61, 0.8)
+    );
     color: white;
     margin-top: 612px;
     @include md {
@@ -74,7 +77,6 @@
       @include md {
         color: white;
       }
-
     }
     &__subtitle {
       font-size: $regular-text;
@@ -97,7 +99,7 @@
       border-radius: 25px;
       font-family: 'Montserrat';
       cursor: pointer;
-      margin-top: .4rem;
+      margin-top: 0.4rem;
     }
     button:hover {
       background-color: rgb(255, 0, 140);
@@ -107,24 +109,20 @@
       outline: none;
     }
   }
-  
-  
-  
+
   @keyframes appear {
     from {
       opacity: 0;
     }
     to {
       opacity: 1;
-     
     }
   }
 }
-.portfolio-card:hover .portfolio-card__content  {
+.portfolio-card:hover .portfolio-card__content {
   opacity: 0.95;
-  transition: all ease-in-out .2s;
+  transition: all ease-in-out 0.2s;
   animation: appear;
   animation-timing-function: 0.2s;
   margin-top: 0;
- 
 }

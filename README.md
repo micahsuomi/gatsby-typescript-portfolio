@@ -73,10 +73,8 @@ A little bit about my thoughts. This section displays my blog posts and my opini
   </a>
 </p>
 
-The whole portfolio website is built using dynamic data coming from the headless CMS (Content Management System) Contentful, so that all content data, including titles, logos and images in the various sections can be added or updated without ever touching the code. In this case, Contentful proved to be an amazing and easy to use CMS to add content to my portfolio website. 
+The whole portfolio website is built using dynamic data coming from the headless CMS (Content Management System) Contentful, so that all content data, including titles, logos and images in the various sections can be added or updated without ever touching the code. In this case, Contentful proved to be an amazing and easy to use CMS to add content to my portfolio website.
 
 ## Deployment
 
 The app is deployed on Netlify and the demo can be found at the following link: https://michelezuccawebdev.netlify.app/
-
-

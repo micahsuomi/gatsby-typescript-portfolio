@@ -8,7 +8,7 @@
     @include flex-property-column;
     padding: 2rem 2rem;
     @include sm {
-      padding: 2rem .3rem;
+      padding: 2rem 0.3rem;
     }
   }
   @include sm {
