@@ -1,7 +1,7 @@
 @import '../../scss/main.scss';
 
 .education {
-  padding: 7rem 4rem;
+  padding: 5rem 8rem;
   background-color: $color-background;
   background-color: $color-light-grey;
   &__wrapper {
@@ -11,7 +11,7 @@
       padding: 2rem 0.3rem;
     }
   }
-  @include sm {
+  @include lg {
     padding: 5rem 0;
   }
 }

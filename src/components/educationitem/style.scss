@@ -10,15 +10,16 @@
   background-color: white;
   border-radius: 15px;
   @include shadow-trans;
+  @include md {
+    grid-template-columns: 1fr;
+  }
   &__image {
     display: inline-block;
     overflow: hidden;
-    height: 6rem;
     width: 100%;
     object-fit: cover;
-    @include sm {
+    @include md {
       text-align: center;
-      height: 7rem;
     }
     img {
       object-fit: cover;
@@ -40,7 +41,7 @@
     h4 {
       text-align: center;
       color: $color-text;
-      @include sm {
+      @include md {
         margin-top: 1rem;
       }
     }
