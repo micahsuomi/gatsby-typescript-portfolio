@@ -41,6 +41,7 @@ export const query = graphql`
       tech
       demoLink
       githubLink
+      active
     }
     contentfulPortfolioFooter {
       title
@@ -84,6 +85,7 @@ const Portfolio = (props: any) => {
     tech,
     demoLink,
     githubLink,
+    active,
   } = props.data.contentfulPortfolio
   return (
     <Layout>
@@ -130,12 +132,20 @@ const Portfolio = (props: any) => {
               {documentToReactComponents(description.json)}
             </div>
             <div className="portfolio-item__btn-wrapper">
-              <a href={demoLink} target="blank">
-                <button>
+              {active ? (
+                <a href={demoLink} target="blank">
+                  <button>
+                    <span>Demo</span>
+                    <BsBoxArrowUpRight className="portfolio-item__btn-icon" />
+                  </button>
+                </a>
+              ) : (
+                <button disabled className="btn-disabled">
                   <span>Demo</span>
                   <BsBoxArrowUpRight className="portfolio-item__btn-icon" />
                 </button>
-              </a>
+              )}
+
               <a href={githubLink} target="blank">
                 <button>
                   <span>GitHub</span>

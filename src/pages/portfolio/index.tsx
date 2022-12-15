@@ -7,6 +7,7 @@ import Layout from '../../components/layout'
 import PortfolioItem from '../../components/portfolioitem'
 
 import './style.scss'
+import { isAbstractType } from 'graphql'
 
 const Portfolio = () => {
   const data = useStaticQuery(graphql`
@@ -29,6 +30,7 @@ const Portfolio = () => {
               }
             }
             demoLink
+            active
           }
         }
       }
@@ -45,7 +47,7 @@ const Portfolio = () => {
         </p>
         <div className="portfolio__wrapper">
           {data.allContentfulPortfolio.edges.map((edge: any) => {
-            const { slug, title, subtitle, image, demoLink } = edge.node
+            const { slug, title, subtitle, image, demoLink, active } = edge.node
             return (
               <PortfolioItem
                 key={slug}
@@ -54,6 +56,7 @@ const Portfolio = () => {
                 subtitle={subtitle}
                 image={image}
                 demoLink={demoLink}
+                active={active}
               />
             )
           })}
