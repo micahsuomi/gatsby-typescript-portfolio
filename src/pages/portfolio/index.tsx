@@ -7,7 +7,6 @@ import Layout from '../../components/layout'
 import PortfolioItem from '../../components/portfolioitem'
 
 import './style.scss'
-import { isAbstractType } from 'graphql'
 
 const Portfolio = () => {
   const data = useStaticQuery(graphql`
