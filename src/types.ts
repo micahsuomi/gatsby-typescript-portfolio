@@ -17,6 +17,7 @@ export type PortfolioItemProps = {
   subtitle: string
   image: any
   demoLink: string
+  active: boolean
 }
 export type EducationItemProps = {
   title: string

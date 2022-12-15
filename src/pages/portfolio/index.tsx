@@ -29,6 +29,7 @@ const Portfolio = () => {
               }
             }
             demoLink
+            active
           }
         }
       }
@@ -45,7 +46,7 @@ const Portfolio = () => {
         </p>
         <div className="portfolio__wrapper">
           {data.allContentfulPortfolio.edges.map((edge: any) => {
-            const { slug, title, subtitle, image, demoLink } = edge.node
+            const { slug, title, subtitle, image, demoLink, active } = edge.node
             return (
               <PortfolioItem
                 key={slug}
@@ -54,6 +55,7 @@ const Portfolio = () => {
                 subtitle={subtitle}
                 image={image}
                 demoLink={demoLink}
+                active={active}
               />
             )
           })}
